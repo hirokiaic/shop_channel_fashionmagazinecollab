@@ -1,0 +1,18 @@
+import{n as e}from"./chunk-vNrZSFDR.js";import{t}from"./jsx-runtime-BkkVkyvz.js";import{n,r,t as i}from"./utils-Bvqzco9W.js";import{n as a,t as o}from"./image-DrzLAemo.js";var s,c,l,u,d,f=e((()=>{s=t(),r(),o(),c={default:{button:`h-[48px] w-full max-w-[392px] text-[18px] tracking-[0.9px]`,icon:`left-[24px] top-[12px]`},small:{button:`h-[40px] w-full max-w-[140px] text-[16px] tracking-[0.8px]`,icon:`left-[8px] top-[8px]`}},l=`relative isolate flex cursor-pointer items-center justify-center rounded-[4px] bg-navy font-jost font-medium leading-[1.7] text-white no-underline outline-none transition-colors duration-300 ease-out hover:bg-navy-hover focus:outline-none focus-visible:outline-none`,u=({children:e,variant:t})=>(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(`span`,{className:n(`pointer-events-none absolute flex size-[24px] items-center justify-center`,c[t].icon),children:(0,s.jsx)(a,{src:i(`/images/icon-cart.svg`),alt:``,width:24,height:24,"aria-hidden":!0,className:`size-[24px]`})}),(0,s.jsx)(`span`,{className:`relative z-[1] shrink-0 whitespace-nowrap`,children:e})]}),d=({children:e=`BUY`,variant:t=`default`,className:r,href:i,isExtLink:a=!1,...o})=>{let d=n(l,c[t].button,r);return i?(0,s.jsx)(`a`,{href:i,className:d,target:a?`_blank`:void 0,rel:a?`noopener noreferrer`:void 0,...o,children:(0,s.jsx)(u,{variant:t,children:e})}):(0,s.jsx)(`button`,{type:`button`,className:d,...o,children:(0,s.jsx)(u,{variant:t,children:e})})},d.__docgenInfo={description:``,methods:[],displayName:`Button`,props:{children:{defaultValue:{value:`"BUY"`,computed:!1},required:!1},variant:{defaultValue:{value:`"default"`,computed:!1},required:!1},isExtLink:{defaultValue:{value:`false`,computed:!1},required:!1}}}})),p,m,h,g,_,v,y;e((()=>{p=t(),f(),m={title:`Button/Button`,component:d,parameters:{layout:`padded`,backgrounds:{default:`warm`,values:[{name:`warm`,value:`#efe9e0`},{name:`white`,value:`#ffffff`},{name:`dark`,value:`#1b1b1b`}]}},decorators:[e=>(0,p.jsx)(`div`,{className:`mx-auto w-full max-w-[440px] bg-background-warm p-10`,children:(0,p.jsx)(`div`,{className:`flex w-full justify-center`,children:(0,p.jsx)(e,{})})})],args:{children:`BUY`,variant:`default`},argTypes:{variant:{control:`select`,options:[`default`,`small`]},href:{control:`text`},isExtLink:{control:`boolean`}}},h={},g={args:{variant:`small`}},_={parameters:{docs:{description:{story:`On hover, the background transitions from navy to navy-hover.`}}}},v={args:{href:`https://www.shopch.jp/`,isExtLink:!0}},h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{}`,...h.parameters?.docs?.source},description:{story:`Figma 42034:2289 — Default`,...h.parameters?.docs?.description}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  args: {
+    variant: "small"
+  }
+}`,...g.parameters?.docs?.source},description:{story:`Figma 44009:1400 — Small`,...g.parameters?.docs?.description}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: "On hover, the background transitions from navy to navy-hover."
+      }
+    }
+  }
+}`,..._.parameters?.docs?.source},description:{story:`Hover: navy → #5469ad`,..._.parameters?.docs?.description}}},v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`{
+  args: {
+    href: "https://www.shopch.jp/",
+    isExtLink: true
+  }
+}`,...v.parameters?.docs?.source},description:{story:`External link`,...v.parameters?.docs?.description}}},y=[`Default`,`Small`,`WithHoverAnimation`,`AsLink`]}))();export{v as AsLink,h as Default,g as Small,_ as WithHoverAnimation,y as __namedExportsOrder,m as default};

@@ -1,0 +1,12 @@
+import{n as e}from"./chunk-vNrZSFDR.js";import{t}from"./jsx-runtime-BkkVkyvz.js";import{n,r}from"./utils-Bvqzco9W.js";var i,a,o=e((()=>{i=t(),r(),a=({children:e,className:t})=>(0,i.jsxs)(`p`,{className:n(`m-0 flex w-full items-start gap-1`,`font-noto-sans-jp text-[11px] font-normal leading-[1.8] tracking-[1.1px] text-black break-words`,t),children:[(0,i.jsx)(`span`,{"aria-hidden":!0,className:`shrink-0 whitespace-nowrap`,children:`※`}),(0,i.jsx)(`span`,{className:`min-w-0 flex-1`,children:e})]}),a.__docgenInfo={description:``,methods:[],displayName:`Notes`,props:{children:{required:!0,tsType:{name:`ReactNode`},description:``},className:{required:!1,tsType:{name:`string`},description:``}}}})),s,c,l,u,d;e((()=>{s=t(),o(),c={title:`Notes/Notes`,component:a,parameters:{layout:`padded`,backgrounds:{default:`warm`,values:[{name:`warm`,value:`#efe9e0`},{name:`blush`,value:`#f8f3ec`},{name:`white`,value:`#ffffff`}]}},decorators:[e=>(0,s.jsx)(`div`,{className:`mx-auto w-full max-w-[440px] bg-background-warm p-10`,children:(0,s.jsx)(e,{})})],args:{children:`先行販売の数量には限りがございます。予定数に達した場合は、11月8日(日)放映日にあらためてご確認ください。`}},l={},u={decorators:[e=>(0,s.jsx)(`div`,{className:`mx-auto w-full max-w-[280px] bg-background-warm p-10`,children:(0,s.jsx)(e,{})})],parameters:{docs:{description:{story:`When text wraps, continuation lines stay aligned with the body text — not beneath the ※ marker.`}}}},l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`{}`,...l.parameters?.docs?.source},description:{story:`Figma 50015:3820`,...l.parameters?.docs?.description}}},u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
+  decorators: [Story => <div className="mx-auto w-full max-w-[280px] bg-background-warm p-10">\r
+                <Story />\r
+            </div>],
+  parameters: {
+    docs: {
+      description: {
+        story: "When text wraps, continuation lines stay aligned with the body text — not beneath the ※ marker."
+      }
+    }
+  }
+}`,...u.parameters?.docs?.source},description:{story:`Wrapped lines align with text start, not under ※`,...u.parameters?.docs?.description}}},d=[`Default`,`WithLineBreak`]}))();export{l as Default,u as WithLineBreak,d as __namedExportsOrder,c as default};

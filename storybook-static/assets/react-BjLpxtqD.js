@@ -1,0 +1,1 @@
+import{n as e,t}from"./react-CQD1_Joc.js";t();export{e as MDXProvider};

@@ -1,0 +1,18 @@
+---
+description: General rules for development
+alwaysApply: true
+---
+
+# Prompt Dev rules
+
+- use existing components to assemble the screen
+- do not export or generate images where configuration using HTML and Tailwind is possible
+- do not export or generate images, as they likely already exist in @public/images
+- do not use fixed widths and heights; use max-width and padding
+- use the <br/> tag for line breaks within text; do not create a separate <p> tag
+- use images located in @public/images
+- when configuring images, use the `addBasePathToPath` function.
+- use pixel (px) measurements
+- when generating components, classify them (e.g., title, card) and group them into folders.
+- if it doesn't exist, create the storybook story for the newly created component as well.
+- manage the stories within the `stories` folder and group them by type (title, card, etc.).
