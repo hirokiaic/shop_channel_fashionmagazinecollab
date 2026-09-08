@@ -6,7 +6,7 @@ type TagProps = {
     className?: string;
 };
 
-const Tag = ({ children = "OA INFORMATION", className }: TagProps) => {
+const Tag = ({ children, className }: TagProps) => {
     return (
         <span
             className={cn(

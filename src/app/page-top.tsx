@@ -6,66 +6,9 @@ import MVContent from "./PageSections/mvContent";
 import Footer from "./Footer";
 
 export default function PageTop() {
-    const mvRef = useRef<HTMLDivElement>(null);
-    const messageSeenRef = useRef(false);
-    const footerVisibleRef = useRef(false);
-    const mvHeroActiveRef = useRef(true);
-    const [showButton, setShowButton] = useState(false);
-
-    useEffect(() => {
-        const messageEl = document.getElementById("message-section");
-        const footerEl = document.getElementById("footer");
-        const mvEl = mvRef.current;
-        if (!messageEl || !footerEl || !mvEl) return;
-
-        const updateVisibility = () => {
-            setShowButton(
-                messageSeenRef.current &&
-                    !footerVisibleRef.current &&
-                    !mvHeroActiveRef.current,
-            );
-        };
-
-        const updateMvHero = () => {
-            mvHeroActiveRef.current =
-                mvEl.getBoundingClientRect().bottom > window.innerHeight;
-            updateVisibility();
-        };
-
-        const messageObserver = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) messageSeenRef.current = true;
-                updateVisibility();
-            },
-            { threshold: 0 },
-        );
-
-        const footerObserver = new IntersectionObserver(
-            ([entry]) => {
-                footerVisibleRef.current = entry.isIntersecting;
-                updateVisibility();
-            },
-            { threshold: 0 },
-        );
-
-        messageObserver.observe(messageEl);
-        footerObserver.observe(footerEl);
-
-        updateMvHero();
-        window.addEventListener("scroll", updateMvHero, { passive: true });
-        window.addEventListener("resize", updateMvHero);
-
-        return () => {
-            messageObserver.disconnect();
-            footerObserver.disconnect();
-            window.removeEventListener("scroll", updateMvHero);
-            window.removeEventListener("resize", updateMvHero);
-        };
-    }, []);
-
-    return (
+        return (
         <main id="main">
-            <div ref={mvRef} className="relative z-[1] overflow-hidden">
+            <div className="relative z-[1] overflow-hidden">
                 <MVContent />
             </div>
 

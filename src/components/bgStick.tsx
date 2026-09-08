@@ -1,81 +1,122 @@
 "use client";
 import { addBasePathToPath, cn } from "@/lib/utils";
-import { useExpired } from "@/app/Context/expiredContext";
-import React from "react";
+import Tag from "@/components/Tag/tag";
+import AnchorLink2 from "@/components/AnchorLink/anchorLink2";
+import AnchorLink3 from "@/components/AnchorLink/anchorLink3";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+const SLIDES = [
+    {
+        src: "/images/slides/slide-3.webp",
+        alt: "コラボレーションルック",
+    },
+    {
+        src: "/images/slides/slide-4.webp",
+        alt: "コラボレーションルック",
+    }
+] as const;
 
 type BgStickyProps = {
     className?: string;
 };
 
 const BgSticky = ({ className, ...props }: BgStickyProps) => {
-
-    const { expiredMap } = useExpired();
-    const isExpired = (key: string) => expiredMap[key] ?? false;
-
     return (
         <div className={cn("absolute top-0 w-full h-full", className)} {...props} >
+
             <div className="sticky top-0 h-screen overflow-hidden">
                 {/* right */}
-                <div className="hidden lg:block justify-self-end w-[calc((100vw-440px)/2)] -translate-y-1/2 absolute top-1/2">
-                    {/* <div className="w-full max-w-[300px] m-auto flex flex-col gap-8 px-4">
-                        <div className="w-full flex flex-col gap-2">
-                            <AnchorLink href="#challenge-01" variant="compact">
-                                <p className="m-0 shrink-0 bg-gold-gradient bg-clip-text font-scheherazade-new text-[20px] font-normal leading-[1.4] tracking-[2px] text-transparent">
-                                    Challenge 01
-                                </p>
-                            </AnchorLink>
-                            <div className="flex flex-col pl-2">
-                                <SubAnchorLink href="#01チャレンジ対象商品">チャレンジ対象商品</SubAnchorLink>
-                                <SubAnchorLink href="#01ご参加方法">ご参加方法</SubAnchorLink>
-                            </div>
+                <div className="absolute top-[18%] right-0 hidden w-[calc((100vw-440px)/2)] lg:block">
+                    <div className="w-full max-w-[340px] m-auto flex flex-col gap-8">
+                        <div className="flex w-full flex-col items-center gap-[8px] border-y border-black px-2 py-4 tracking-[0.05em]">
+                            <Tag>OA INFORMATION</Tag>
+
+                            <p className="m-0 text-center font-jost font-normal tracking-[1.4px] text-black">
+                                <span className="text-[28px] leading-[1.7]">2026.11.08 <span className="text-[18px]">(sun)</span></span>
+                                <span className="text-[28px] leading-[1.7] whitespace-nowrap"> 23:00～</span>
+                            </p>
                         </div>
 
-                        <div className="w-full flex flex-col gap-2">
-                            <AnchorLink href="#challenge-02" variant="compact">
-                                <p className="m-0 shrink-0 bg-gold-gradient bg-clip-text font-scheherazade-new text-[20px] font-normal leading-[1.4] tracking-[2px] text-transparent">
-                                    Challenge 02
-                                </p>
-                            </AnchorLink>
-                            <div className="flex flex-col pl-2">
-                                <SubAnchorLink href="#02チャレンジ対象商品">チャレンジ対象商品</SubAnchorLink>
-                                <SubAnchorLink href="#02ご参加方法">ご参加方法</SubAnchorLink>
-                            </div>
-                        </div>
-                    </div> */}
+
+                        <Swiper
+                            modules={[Autoplay, EffectFade]}
+                            effect="fade"
+                            fadeEffect={{ crossFade: true }}
+                            loop
+                            slidesPerView={1}
+                            speed={1500}
+                            autoplay={{
+                                delay: 7000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: false,
+                            }}
+                            className="aspect-[366/560] w-full max-w-[300px]"
+                        >
+                            {SLIDES.map((slide) => (
+                                <SwiperSlide key={slide.src}>
+                                    <div className="relative aspect-[366/560] w-full">
+                                        <Image
+                                            src={addBasePathToPath(slide.src)}
+                                            alt={slide.alt}
+                                            fill
+                                            sizes="300px"
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
 
                 {/* left */}
-                <div className="hidden lg:block justify-self-start w-[calc((100vw-440px)/2)] -translate-y-1/2 absolute top-1/2">
-                    {/* <div className="flex flex-col items-center gap-3 px-4">
-                        <CardFrame3 title={<>本日チャレンジ挑戦中<span className="font-noto-serif-jp font-bold">！</span></>}>
-                            <>
-                                <div className="relative mx-auto h-14 w-full max-w-[166px] shrink-0">
-                                    <Image
-                                        alt=""
-                                        className="object-contain"
-                                        fill
-                                        src={addBasePathToPath("/images/guiness-logo-2.svg")}
-                                    />
-                                </div>
-                                <p className="m-0 w-full text-center font-shippori-mincho text-[0px] font-bold tracking-[1.6px] text-primary">
-                                    <span className="text-[30px] leading-[1.2]">
-                                        世界記
-                                    </span>
-                                    <span className="text-[30px] leading-[1.2] tracking-[4.5px]">
-                                        録
-                                    </span>
-                                    <span className="text-[24px] leading-[1.2]">
-                                        への
-                                    </span>
-                                    <span className="text-[30px] leading-[1.2]">
-                                        挑戦
-                                    </span>
-                                </p>
-                            </>
-                        </CardFrame3>
-                        <Button2>ブランド詳細はこちら</Button2>
-                    </div> */}
+                <div className="absolute top-[18%] left-0 hidden w-[calc((100vw-440px)/2)] lg:block">
+                    <div className="mx-auto flex w-full max-w-[340px] flex-col items-center px-4">
+                        <div className="flex w-full flex-col items-end gap-[16px]">
+                            <AnchorLink2
+                                href="#collaboration-01"
+                                number="01"
+                                imageSrc="/images/collab-item-1.webp"
+                                imageAlt="Collaboration item 01"
+                                className="w-full"
+                            />
+
+                            <AnchorLink2
+                                href="#collaboration-02"
+                                number="02"
+                                imageSrc="/images/collab-item-2.webp"
+                                imageAlt="Collaboration item 02"
+                                className="w-full [&>span:last-child]:opacity-40"
+                            />
+                        </div>
+
+                        <div className="mt-[24px] flex w-full flex-col items-start gap-[10px] pr-[20px]">
+                            <AnchorLink3 href="#cotton-cashmere-top" className="w-full max-w-none">
+                                COTTON CASHMERE TOP
+                            </AnchorLink3>
+
+                            <AnchorLink3 href="#semi-wide-jeans" className="w-full max-w-none">
+                                SEMI - WIDE JEANS
+                            </AnchorLink3>
+
+                            <AnchorLink3 href="#cardigan" className="w-full max-w-none">
+                                CARDIGAN
+                            </AnchorLink3>
+
+                            <AnchorLink3 href="#check-stole" className="w-full max-w-none">
+                                CHECK STOLE
+                            </AnchorLink3>
+
+                            <AnchorLink3 href="#other-item" className="w-full max-w-none">
+                                OTHER ITEM
+                            </AnchorLink3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

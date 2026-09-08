@@ -77,16 +77,6 @@ function MVSlideCard({ src, alt, className }: MVSlideCardProps) {
                     className="object-cover"
                 />
             </div>
-
-            <div className="absolute right-[12px] bottom-[14px] h-[20px] w-[74px]">
-                <Image
-                    src={addBasePathToPath("/images/eclat-slide-logo.svg")}
-                    alt=""
-                    fill
-                    aria-hidden
-                    className="object-contain object-right-bottom"
-                />
-            </div>
         </div>
     );
 }
