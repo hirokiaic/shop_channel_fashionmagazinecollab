@@ -26,7 +26,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
         <header className={cn("absolute lg:fixed top-3.5 lg:top-5 z-50 w-full px-5 pointer-events-none", className)}
             {...props}
         >
-            <div className={cn("w-full h-16 lg:h-[88px] rounded-[8px] flex items-center justify-between px-4 lg:px-10",
+            <div className={cn("w-full h-16 lg:h-[88px] rounded-[8px] flex items-center justify-between px-4 lg:px-10 shadow-[0_0px_40px_rgba(51,51,51,0.20)]",
                 hideNavBg ? "bg-transparent backdrop-blur-none" : "bg-[rgba(255,255,255,0.8)] backdrop-blur-sm"
             )}>
                 {/* sp */}
