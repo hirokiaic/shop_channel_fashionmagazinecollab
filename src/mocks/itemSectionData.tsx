@@ -1,4 +1,4 @@
-import type { ItemSectionData } from "./itemSection";
+import type { ItemSectionData } from "../app/PageSections/itemSection";
 
 export const item01SectionData: ItemSectionData = {
     id: "collaboration-01",
@@ -67,11 +67,11 @@ export const item01SectionData: ItemSectionData = {
 export const item02SectionData: ItemSectionData = {
     id: "collaboration-02",
     badge: {
-        src: "/images/item02.svg",
+        src: "/images/item02-1.svg",
         width: 138,
         height: 57,
         className:
-            "pointer-events-none absolute top-[-8px] right-[1px] h-[57px] w-[138px] max-w-none",
+            "pointer-events-none absolute top-[-7px] right-[3px] h-[78px] w-[247px] max-w-none",
     },
     heading: (
         <>

@@ -1,20 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import ItemSection from "@/app/PageSections/itemSection";
-import {
-    item01SectionData,
-    item02SectionData,
-} from "@/mocks/itemSectionData";
+import ThanksSection from "@/app/PageSections/thanksSection";
 
 const meta = {
-    title: "Section/ItemSection",
-    component: ItemSection,
+    title: "Section/ThanksSection",
+    component: ThanksSection,
     parameters: {
         layout: "fullscreen",
         backgrounds: {
-            default: "blush",
+            default: "warm",
             values: [
-                { name: "blush", value: "#f8f3ec" },
+                { name: "warm", value: "#efe9e0" },
                 { name: "white", value: "#ffffff" },
             ],
         },
@@ -26,16 +22,11 @@ const meta = {
             </div>
         ),
     ],
-} satisfies Meta<typeof ItemSection>;
+} satisfies Meta<typeof ThanksSection>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Item01: Story = {
-    args: item01SectionData,
-};
-
-export const Item02: Story = {
-    args: item02SectionData,
-};
+/** Figma 50007:3768 */
+export const Default: Story = {};

@@ -1,5 +1,5 @@
-import { addBasePathToPath, cn } from "@/lib/utils";
-import Image from "next/image";
+import IconSvg from "@/components/iconSvg";
+import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 const variantStyles = {
@@ -12,6 +12,32 @@ const variantStyles = {
         button:
             "h-[40px] w-full max-w-[140px] text-[16px] tracking-[0.8px]",
         icon: "left-[8px] top-[8px]",
+    },
+    back: {
+        button:
+            "h-[56px] w-full max-w-none font-noto-sans-jp text-[16px] font-medium leading-[1.8] tracking-[1.6px]",
+        icon: "left-[24px] top-1/2 -translate-y-1/2",
+    },
+} as const;
+
+const iconStyles = {
+    default: {
+        iconSrc: "/images/icon-cart.svg",
+        iconW: "24",
+        iconH: "24",
+        className: "bg-white",
+    },
+    small: {
+        iconSrc: "/images/icon-cart.svg",
+        iconW: "24",
+        iconH: "24",
+        className: "bg-white",
+    },
+    back: {
+        iconSrc: "/images/icon-arrow.svg",
+        iconW: "14",
+        iconH: "8",
+        className: "bg-white rotate-90",
     },
 } as const;
 
@@ -43,28 +69,30 @@ const ButtonContent = ({
 }: {
     children: ReactNode;
     variant: keyof typeof variantStyles;
-}) => (
-    <>
-        <span
-            className={cn(
-                "pointer-events-none absolute flex size-[24px] items-center justify-center",
-                variantStyles[variant].icon,
-            )}
-        >
-            <Image
-                src={addBasePathToPath("/images/icon-cart.svg")}
-                alt=""
-                width={24}
-                height={24}
-                aria-hidden
-                className="size-[24px]"
-            />
-        </span>
-        <span className="relative z-[1] shrink-0 whitespace-nowrap">
-            {children}
-        </span>
-    </>
-);
+}) => {
+    const icon = iconStyles[variant];
+
+    return (
+        <>
+            <span
+                className={cn(
+                    "pointer-events-none absolute flex size-[24px] items-center justify-center",
+                    variantStyles[variant].icon,
+                )}
+            >
+                <IconSvg
+                    iconSrc={icon.iconSrc}
+                    iconW={icon.iconW}
+                    iconH={icon.iconH}
+                    className={icon.className}
+                />
+            </span>
+            <span className="relative z-[1] shrink-0 whitespace-nowrap">
+                {children}
+            </span>
+        </>
+    );
+};
 
 const Button = ({
     children = "BUY",

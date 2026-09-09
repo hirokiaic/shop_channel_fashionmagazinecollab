@@ -153,6 +153,9 @@
     @apply text-[13px] md:text-sm font-noto-sans-jp leading-[2] text-black;
   }
   .inner {
-    @apply w-full px-6 mx-auto;
+    @apply w-full px-4 sm:px-6 mx-auto;
+  }
+  .outer {
+    @apply w-full px-2.5 mx-auto;
   }
 }

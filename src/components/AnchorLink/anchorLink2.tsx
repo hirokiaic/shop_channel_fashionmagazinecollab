@@ -1,3 +1,4 @@
+import IconSvg from "@/components/iconSvg";
 import { addBasePathToPath, cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -62,13 +63,11 @@ const AnchorLink2 = ({
                             <span className="font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap">
                                 ITEM #{number}
                             </span>
-                            <Image
-                                src={addBasePathToPath("/images/icon-arrow.svg")}
-                                alt=""
-                                width={24}
-                                height={24}
-                                aria-hidden
-                                className="size-3 shrink-0 object-contain"
+                            <IconSvg
+                                iconSrc="/images/icon-arrow.svg"
+                                iconW="12"
+                                iconH="8"
+                                className="shrink-0 bg-black"
                             />
                         </span>
                     </div>

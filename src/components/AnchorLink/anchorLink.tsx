@@ -1,5 +1,5 @@
-import { addBasePathToPath, cn } from "@/lib/utils";
-import Image from "next/image";
+import IconSvg from "@/components/iconSvg";
+import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 const variantStyles = {
@@ -51,12 +51,11 @@ const AnchorLink = ({
                     styles.icon,
                 )}
             >
-                <Image
-                    src={addBasePathToPath("/images/icon-arrow.svg")}
-                    alt=""
-                    width={24}
-                    height={24}
-                    className="size-3.5"
+                <IconSvg
+                    iconSrc="/images/icon-arrow.svg"
+                    iconW="14"
+                    iconH="8"
+                    className="bg-black"
                 />
             </span>
         </a>

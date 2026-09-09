@@ -1,5 +1,5 @@
-import { addBasePathToPath, cn } from "@/lib/utils";
-import Image from "next/image";
+import IconSvg from "@/components/iconSvg";
+import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 type AnchorLink3Props = {
@@ -21,17 +21,12 @@ const AnchorLink3 = ({ children, className, ...props }: AnchorLink3Props) => {
         >
             <span className="shrink-0 whitespace-nowrap">{children}</span>
 
-            <span aria-hidden className="relative size-3 shrink-0">
-                <span className="absolute inset-[-8.84%_-4.42%_-17.68%_-4.42%]">
-                    <Image
-                        src={addBasePathToPath("/images/icon-arrow.svg")}
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="block size-full max-w-none"
-                    />
-                </span>
-            </span>
+            <IconSvg
+                iconSrc="/images/icon-arrow.svg"
+                iconW="12"
+                iconH="8"
+                className="shrink-0 bg-black"
+            />
         </a>
     );
 };

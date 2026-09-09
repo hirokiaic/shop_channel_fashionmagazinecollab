@@ -94,7 +94,7 @@ export default function ItemSection({
         <section
             id={id}
             className={cn(
-                "flex flex-col items-center gap-16 border-x border-black bg-background-blush inner pt-20 pb-16",
+                "flex flex-col items-center gap-16 bg-background-blush inner pt-20 pb-16",
                 className,
             )}
         >

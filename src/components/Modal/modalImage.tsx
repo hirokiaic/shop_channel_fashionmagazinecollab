@@ -1,5 +1,6 @@
 "use client";
 
+import IconSvg from "@/components/iconSvg";
 import { addBasePathToPath, cn } from "@/lib/utils";
 import Image from "next/image";
 import { useEffect, useId, useState } from "react";
@@ -14,12 +15,28 @@ const sizeStyles = {
         modalImage: "max-w-[380px] aspect-square",
         modalImageSizes: "380px",
     },
+    compact: {
+        trigger: "max-w-[140px]",
+        aspect: "aspect-square",
+        gradient: "h-[40px]",
+        imageSizes: "140px",
+        modalImage: "max-w-[380px] aspect-square",
+        modalImageSizes: "380px",
+    },
     portrait: {
         trigger: "max-w-[214px]",
         aspect: "aspect-[214/302]",
         gradient: "h-[48px]",
         imageSizes: "214px",
         modalImage: "max-w-[380px] aspect-[214/302]",
+        modalImageSizes: "380px",
+    },
+    card: {
+        trigger: "max-w-[160px]",
+        aspect: "aspect-[160/226]",
+        gradient: "h-[40px]",
+        imageSizes: "160px",
+        modalImage: "max-w-[380px] aspect-[160/226]",
         modalImageSizes: "380px",
     },
 } as const;
@@ -92,13 +109,11 @@ const ModalImage = ({
                                   className="flex size-[40px] shrink-0 cursor-pointer items-center justify-center"
                                   onClick={() => setOpen(false)}
                               >
-                                  <Image
-                                      src={addBasePathToPath("/images/icon-close.svg")}
-                                      alt=""
-                                      width={40}
-                                      height={40}
-                                      aria-hidden
-                                      className="size-[40px]"
+                                  <IconSvg
+                                      iconSrc="/images/icon-close.svg"
+                                      iconW="40"
+                                      iconH="40"
+                                      className="bg-black"
                                   />
                               </button>
                           </div>

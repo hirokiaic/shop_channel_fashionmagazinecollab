@@ -5,7 +5,7 @@ import Button from "@/components/Button/button";
 
 type ButtonStoryProps = {
     children?: ReactNode;
-    variant?: "default" | "small";
+    variant?: "default" | "small" | "back";
     className?: string;
     href?: string;
     isExtLink?: boolean;
@@ -41,7 +41,7 @@ const meta = {
     argTypes: {
         variant: {
             control: "select",
-            options: ["default", "small"],
+            options: ["default", "small", "back"],
         },
         href: {
             control: "text",
@@ -82,5 +82,16 @@ export const AsLink: Story = {
     args: {
         href: "https://www.shopch.jp/",
         isExtLink: true,
+    },
+};
+
+/** Figma 50007:3773 — Back */
+export const Back: Story = {
+    args: {
+        children: "30周年特設サイトへ戻る",
+        variant: "back",
+        href: "https://www.shopch.jp/pc/cmn/a/sp/30th",
+        isExtLink: true,
+        className: "w-full",
     },
 };

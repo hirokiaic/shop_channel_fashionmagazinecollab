@@ -9,7 +9,7 @@ export default function AnchorSection({ className }: AnchorSectionProps) {
     return (
         <section
             className={cn(
-                "flex flex-col items-center gap-2 border-x border-black bg-background-blush inner pt-16",
+                "flex flex-col items-center gap-2 bg-background-blush inner pt-16",
                 className,
             )}
         >

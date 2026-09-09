@@ -7,7 +7,11 @@ import Footer from "./Footer";
 import AnchorSection from "./PageSections/anchorSection";
 import { Separator } from "@base-ui/react";
 import ItemSection from "./PageSections/itemSection";
-import { item01SectionData, item02SectionData } from "./PageSections/itemSectionData";
+import StyleSection from "./PageSections/styleSection";
+import InfoSection from "./PageSections/infoSection";
+import ThanksSection from "./PageSections/thanksSection";
+import { item01SectionData, item02SectionData } from "../mocks/itemSectionData";
+import { styleSectionData } from "../mocks/styleSectionData";
 
 export default function PageTop() {
         return (
@@ -19,7 +23,7 @@ export default function PageTop() {
             <div className="relative flex h-full bg-background-blush -mt-px">
                 <BgSticky className="hidden lg:block" />
 
-                <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)]">
+                <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)] border-x border-black">
                     <IntroSection />
 
                     <AnchorSection />
@@ -29,6 +33,12 @@ export default function PageTop() {
                     <Separator className="w-full h-px bg-grayCC" />
 
                     <ItemSection {...item02SectionData} />
+
+                    <StyleSection {...styleSectionData} />
+
+                    <InfoSection />
+
+                    <ThanksSection />
 
                     <Footer id="footer" />
                 </div>
