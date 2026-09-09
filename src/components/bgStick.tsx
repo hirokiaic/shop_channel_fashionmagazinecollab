@@ -36,7 +36,7 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
                         <div className="flex w-full flex-col items-center gap-[8px] border-y border-black px-2 py-4 tracking-[0.05em]">
                             <Tag>OA INFORMATION</Tag>
 
-                            <p className="m-0 text-center font-jost font-normal tracking-[1.4px] text-black">
+                            <p className="m-0 text-center font-jost font-normal tracking-[0.05em] text-black">
                                 <span className="text-[28px] leading-[1.7]">2026.11.08 <span className="text-[18px]">(sun)</span></span>
                                 <span className="text-[28px] leading-[1.7] whitespace-nowrap"> 23:00～</span>
                             </p>

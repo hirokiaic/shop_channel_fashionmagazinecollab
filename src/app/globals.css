@@ -150,6 +150,6 @@
     @apply font-sans;
   }
   p {
-    @apply text-[13px] md:text-sm font-noto-sans-jp leading-[2];
+    @apply text-[13px] md:text-sm font-noto-sans-jp leading-[2] text-black;
   }
 }
