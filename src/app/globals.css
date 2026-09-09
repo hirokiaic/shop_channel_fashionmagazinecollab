@@ -152,4 +152,7 @@
   p {
     @apply text-[13px] md:text-sm font-noto-sans-jp leading-[2] text-black;
   }
+  .inner {
+    @apply w-full px-6 mx-auto;
+  }
 }

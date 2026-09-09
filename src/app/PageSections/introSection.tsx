@@ -10,7 +10,7 @@ export default function IntroSection({ className }: IntroSectionProps) {
     return (
         <section
             className={cn(
-                "flex flex-col items-center gap-[64px] border-x border-black bg-background-blush px-[24px] pt-[80px] pb-[64px]",
+                "flex flex-col items-center gap-[64px] border-x border-black bg-background-blush inner pt-20",
                 className,
             )}
         >
