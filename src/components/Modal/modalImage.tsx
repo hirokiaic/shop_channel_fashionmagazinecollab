@@ -8,7 +8,7 @@ import { createPortal } from "react-dom";
 
 const sizeStyles = {
     default: {
-        trigger: "max-w-[160px] md:max-w-[170px]",
+        trigger: "w-[47%] md:max-w-[170px]",
         aspect: "aspect-square",
         gradient: "h-[40px]",
         imageSizes: "170px",
@@ -16,7 +16,7 @@ const sizeStyles = {
         modalImageSizes: "380px",
     },
     compact: {
-        trigger: "max-w-[130px] md:max-w-[140px]",
+        trigger: "md:max-w-[140px]",
         aspect: "aspect-square",
         gradient: "h-[40px]",
         imageSizes: "140px",
@@ -24,7 +24,7 @@ const sizeStyles = {
         modalImageSizes: "380px",
     },
     portrait: {
-        trigger: "max-w-[199px] md:max-w-[214px]",
+        trigger: "w-[58%] md:max-w-[214px]",
         aspect: "aspect-[214/302]",
         gradient: "h-[48px]",
         imageSizes: "214px",
@@ -32,7 +32,7 @@ const sizeStyles = {
         modalImageSizes: "380px",
     },
     card: {
-        trigger: "max-w-[160px]",
+        trigger: "",
         aspect: "aspect-[160/226]",
         gradient: "h-[40px]",
         imageSizes: "160px",

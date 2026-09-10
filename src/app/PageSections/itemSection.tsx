@@ -171,7 +171,7 @@ export default function ItemSection({
                                             className="shrink-0"
                                         />
 
-                                        <p className="w-full max-w-[160px] font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[0.65px] text-black">
+                                        <p className="w-1/2 font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[0.65px] text-black">
                                             {item.text}
                                         </p>
                                     </div>

@@ -6,7 +6,7 @@ const variantStyles = {
     default: {
         button:
             "h-12 w-full max-w-[392px] text-lg tracking-[0.9px]",
-        icon: "left-26 top-3",
+        icon: "left-6 top-3",
     },
     small: {
         button:

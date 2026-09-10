@@ -138,6 +138,8 @@ export default function MVContent({ className }: MVContentProps) {
                     slidesPerView="auto"
                     spaceBetween={20}
                     speed={10000}
+                    allowTouchMove={false}
+                    simulateTouch={false}
                     autoplay={{
                         delay: 0,
                         disableOnInteraction: false,

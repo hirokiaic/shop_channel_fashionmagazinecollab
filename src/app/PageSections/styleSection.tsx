@@ -71,7 +71,7 @@ function FeaturedItemRow({
                     className="shrink-0"
                 />
 
-                <div className="flex w-full max-w-[130px] md:max-w-[140px] shrink-0 flex-col items-start gap-[22px]">
+                <div className="flex w-[38%] shrink-0 flex-col items-start gap-[22px]">
                     <ModalImage
                         src={item.images.sub1}
                         alt=""
@@ -121,9 +121,19 @@ function FeaturedItemRow({
     );
 }
 
+function chunkItems<T>(items: T[], size: number): T[][] {
+    const rows: T[][] = [];
+
+    for (let index = 0; index < items.length; index += size) {
+        rows.push(items.slice(index, index + size));
+    }
+
+    return rows;
+}
+
 function StylingCard({ item }: { item: StyleGridItem }) {
     return (
-        <div className="flex w-full max-w-40 flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 px-5">
             <ModalImage src={item.image} alt="" size="card" className="shrink-0" />
 
             <p className="w-full font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[1.3px] text-black break-words">
@@ -144,7 +154,7 @@ function StylingCard({ item }: { item: StyleGridItem }) {
                     </p>
                 )}
 
-                <p className="m-0 flex items-baseline gap-[4px] font-jost text-[14px] font-semibold tracking-[0.7px] text-black">
+                <p className="m-0 flex items-center gap-[4px] font-jost text-[14px] font-semibold tracking-[0.7px] text-black">
                     {item.price}
                     <span className="font-noto-sans-jp text-[10px] font-normal tracking-[1px]">
                         (税込)
@@ -153,16 +163,6 @@ function StylingCard({ item }: { item: StyleGridItem }) {
             </div>
         </div>
     );
-}
-
-function chunkItems<T>(items: T[], size: number): T[][] {
-    const rows: T[][] = [];
-
-    for (let index = 0; index < items.length; index += size) {
-        rows.push(items.slice(index, index + size));
-    }
-
-    return rows;
 }
 
 export default function StyleSection({
@@ -218,28 +218,30 @@ export default function StyleSection({
                         For Your Styling
                     </p>
 
-                    <div className="relative flex w-full flex-col items-center gap-5">
-                        {stylingRows.map((row, rowIndex) => (
-                            <div key={rowIndex} className="flex w-full flex-col items-center gap-5 ">
-                                {rowIndex === 0 ? (
-                                    <div className="h-px w-full bg-grayCC" aria-hidden />
-                                ) : null}
+                    <div className="relative w-full">
+                        <div className="mx-auto grid w-full grid-cols-2 justify-between gap-y-5">
+                            <div
+                                className="col-span-2 h-px bg-grayCC"
+                                aria-hidden
+                            />
 
-                                <div className="flex w-full items-center justify-between px-1.5 md:px-5">
-                                    {row.map((item, columnIndex) => (
-                                        <StylingCard
-                                            key={`${item.name}-${rowIndex}-${columnIndex}`}
-                                            item={item}
-                                        />
-                                    ))}
-                                </div>
-
-                                <div className="h-px w-full bg-grayCC" aria-hidden />
-                            </div>
-                        ))}
+                            {stylingRows.flatMap((row, rowIndex) => [
+                                ...row.map((item, columnIndex) => (
+                                    <StylingCard
+                                        key={`${item.name}-${rowIndex}-${columnIndex}`}
+                                        item={item}
+                                    />
+                                )),
+                                <div
+                                    key={`divider-${rowIndex}`}
+                                    className="col-span-2 h-px bg-grayCC"
+                                    aria-hidden
+                                />,
+                            ])}
+                        </div>
 
                         <div
-                            className="pointer-events-none absolute top-px bottom-0 left-1/2 w-px -translate-x-1/2 bg-grayCC"
+                            className="pointer-events-none absolute top-[0.75px] bottom-0 left-1/2 w-px -translate-x-1/2 bg-grayCC"
                             aria-hidden
                         />
                     </div>
