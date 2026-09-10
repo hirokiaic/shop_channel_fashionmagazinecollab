@@ -62,8 +62,6 @@ export const styleSectionData: StyleSectionData = {
         href: "https://www.shopch.jp/",
         leftImage: "/images/product-btn-img1.webp",
         rightImage: "/images/product-btn-img2.webp",
-        leftImageClassName: "-rotate-10",
-        rightImageClassName: "rotate-10",
         isExtLink: true,
     },
 };

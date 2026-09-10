@@ -8,7 +8,7 @@ import { createPortal } from "react-dom";
 
 const sizeStyles = {
     default: {
-        trigger: "max-w-[170px]",
+        trigger: "max-w-[160px] md:max-w-[170px]",
         aspect: "aspect-square",
         gradient: "h-[40px]",
         imageSizes: "170px",
@@ -16,7 +16,7 @@ const sizeStyles = {
         modalImageSizes: "380px",
     },
     compact: {
-        trigger: "max-w-[140px]",
+        trigger: "max-w-[130px] md:max-w-[140px]",
         aspect: "aspect-square",
         gradient: "h-[40px]",
         imageSizes: "140px",
@@ -24,7 +24,7 @@ const sizeStyles = {
         modalImageSizes: "380px",
     },
     portrait: {
-        trigger: "max-w-[214px]",
+        trigger: "max-w-[199px] md:max-w-[214px]",
         aspect: "aspect-[214/302]",
         gradient: "h-[48px]",
         imageSizes: "214px",
@@ -56,13 +56,8 @@ const ModalImage = ({
 }: ModalImageProps) => {
     const styles = sizeStyles[size];
     const [open, setOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
     const labelId = useId();
     const imageSrc = addBasePathToPath(src);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     useEffect(() => {
         if (!open) return;
@@ -81,9 +76,8 @@ const ModalImage = ({
         };
     }, [open]);
 
-    const dialog =
-        open && mounted
-            ? createPortal(
+    const dialog = open
+        ? createPortal(
                   <div
                       className="fixed inset-0 z-[200] flex items-center justify-center p-5"
                       role="presentation"
@@ -106,7 +100,7 @@ const ModalImage = ({
                               <button
                                   type="button"
                                   aria-label="閉じる"
-                                  className="flex size-[40px] shrink-0 cursor-pointer items-center justify-center"
+                                  className="flex size-10 shrink-0 cursor-pointer items-center justify-center"
                                   onClick={() => setOpen(false)}
                               >
                                   <IconSvg
@@ -128,9 +122,10 @@ const ModalImage = ({
                               <Image
                                   src={imageSrc}
                                   alt={alt}
-                                  fill
                                   sizes={styles.modalImageSizes}
                                   className="object-cover"
+                                  width={1920}
+                                  height={1920}
                               />
                           </div>
                       </div>
@@ -160,7 +155,8 @@ const ModalImage = ({
                     <Image
                         src={imageSrc}
                         alt={alt}
-                        fill
+                        width={1920}
+                        height={1920}
                         sizes={styles.imageSizes}
                         className="object-cover"
                     />
@@ -178,10 +174,10 @@ const ModalImage = ({
                     aria-hidden
                     className="pointer-events-none absolute right-1 bottom-1 flex size-[32px] items-center justify-center"
                 >
-                    <span className="relative flex size-[20px] items-center justify-center">
+                    <span className="relative flex size-5 items-center justify-center">
                         <span className="absolute inset-0 rounded-full border border-white" />
-                        <span className="absolute top-1/2 left-1/2 h-[10px] w-px -translate-x-1/2 -translate-y-1/2 bg-white" />
-                        <span className="absolute top-1/2 left-1/2 h-px w-[10px] -translate-x-1/2 -translate-y-1/2 bg-white" />
+                        <span className="absolute top-1/2 left-1/2 h-2.5 w-px -translate-x-1/2 -translate-y-1/2 bg-white" />
+                        <span className="absolute top-1/2 left-1/2 h-px w-2.5 -translate-x-1/2 -translate-y-1/2 bg-white" />
                     </span>
                 </span>
             </button>

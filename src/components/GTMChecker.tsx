@@ -7,10 +7,10 @@ export function GTMChecker() {
 
 	const isProd =
 		window.location.hostname === "30th.shopch.jp" &&
-		window.location.pathname.startsWith("/spcl05");
+		window.location.pathname.startsWith("/spcl06");
 
 	const isDev =
-		window.location.hostname === "shop-channel-ozcollab.vercel.app";
+		window.location.hostname === "shop-channel-.vercel.app";
 
 	if (isProd || isDev) return <GoogleTagManager gtmId="GTM-5VLBQV4S" />;
 

@@ -64,7 +64,7 @@ function ProductBlock({
                     {product.name}
                 </p>
 
-                <p className="m-0 flex items-baseline gap-[8px] font-jost text-[18px] font-semibold leading-[1.8] tracking-[0.9px]">
+                <p className="m-0 flex items-center gap-[8px] font-jost text-[18px] font-semibold leading-[1.8] tracking-[0.9px]">
                     {product.price}
                     <span className="font-noto-sans-jp text-[11px] font-normal tracking-[1.1px]">
                         (税込)
@@ -126,7 +126,8 @@ export default function ItemSection({
                                         <Image
                                             src={addBasePathToPath(image.src)}
                                             alt={image.alt}
-                                            fill
+                                            width={1920}
+                                            height={1920}
                                             sizes="392px"
                                             className="object-cover"
                                         />
@@ -145,8 +146,8 @@ export default function ItemSection({
                         </CardComment>
                     </div>
 
-                    <div className="flex w-full flex-col items-center gap-[40px]">
-                        <div className="flex w-full flex-col items-center gap-[16px]">
+                    <div className="flex w-full flex-col items-center gap-10">
+                        <div className="flex w-full flex-col items-center gap-4">
                             <p className="m-0 font-amiri text-[23px] leading-[1.4] tracking-[2.3px] text-black">
                                 DETAIL
                             </p>
@@ -155,12 +156,12 @@ export default function ItemSection({
                                 写真をタップすると拡大できます。
                             </p>
 
-                            <div className="flex w-full flex-col items-start gap-[32px]">
+                            <div className="flex w-full flex-col items-start gap-8">
                                 {details.map((item, index) => (
                                     <div
                                         key={item.image}
                                         className={cn(
-                                            "flex w-full items-center justify-center gap-[32px] px-4",
+                                            "flex w-full items-center justify-center gap-8",
                                             index % 2 === 1 && "flex-row-reverse",
                                         )}
                                     >
@@ -170,7 +171,7 @@ export default function ItemSection({
                                             className="shrink-0"
                                         />
 
-                                        <p className="m-0 w-full max-w-[160px] shrink-0 font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[0.65px] text-black">
+                                        <p className="w-full max-w-[160px] font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[0.65px] text-black">
                                             {item.text}
                                         </p>
                                     </div>

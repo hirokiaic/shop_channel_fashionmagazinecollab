@@ -89,7 +89,7 @@ export default function MVContent({ className }: MVContentProps) {
     return (
         <section
             className={cn(
-                "relative overflow-hidden border-b border-black bg-white pb-[80px] min-h-[781px] md:min-h-[885px] sm:h-screen lg:h-auto flex flex-col justify-end",
+                "relative overflow-hidden border-b border-black bg-white pb-[80px] min-h-[781px] md:min-h-[885px] flex flex-col justify-end",
                 className,
             )}
         >

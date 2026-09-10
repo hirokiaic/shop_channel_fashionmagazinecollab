@@ -17,7 +17,7 @@ export default function ThanksSection({
     return (
         <section
             className={cn(
-                "outer pb-20",
+                "outer max-md:px-4 pb-20",
                 className,
             )}
         >
@@ -28,17 +28,17 @@ export default function ThanksSection({
                         alt="Thank you!"
                         width={340}
                         height={84}
-                        className="h-auto w-full max-w-[340px]"
+                        className="h-auto w-full max-w-[295px] md:max-w-[340px] mx-auto"
                     />
                 </div>
 
                 <div className="flex w-full flex-col items-center gap-8">
-                    <p className="w-full text-center font-noto-serif-jp text-[29px] font-semibold leading-[1.6] tracking-[2.9px] text-black">
+                    <p className="w-full text-center font-noto-serif-jp text-[26px] md:text-[29px] font-semibold leading-[1.6] tracking-[2.9px] text-black">
                         おかげさまで<br />30周年を迎えました
                     </p>
 
                     <p className="m-0 w-full text-center font-noto-sans-jp text-[14px] font-normal leading-[2] tracking-[1.4px] text-black">
-                        これまでのご愛顧に心より感謝申し上げます。
+                        これまでのご愛顧<br className="md:hidden" />に心より感謝申し上げます。
                         <br />
                         これからも、皆さまの暮らしに寄り添い、
                         <br />

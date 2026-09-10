@@ -59,11 +59,11 @@ function FeaturedItemRow({
     return (
         <div
             className={cn(
-                "flex w-full flex-col items-center gap-5 border-t border-grayCC px-5 py-6",
+                "flex w-full flex-col items-center gap-5 border-t border-grayCC px-1.5 md:px-5 py-6",
                 isLast && "border-b",
             )}
         >
-            <div className="flex w-full items-center justify-center gap-[26px]">
+            <div className="flex w-full items-center justify-center gap-3.5 md:gap-[26px]">
                 <ModalImage
                     src={item.images.main}
                     alt=""
@@ -71,7 +71,7 @@ function FeaturedItemRow({
                     className="shrink-0"
                 />
 
-                <div className="flex w-full max-w-[140px] shrink-0 flex-col items-start gap-[22px]">
+                <div className="flex w-full max-w-[130px] md:max-w-[140px] shrink-0 flex-col items-start gap-[22px]">
                     <ModalImage
                         src={item.images.sub1}
                         alt=""
@@ -123,10 +123,10 @@ function FeaturedItemRow({
 
 function StylingCard({ item }: { item: StyleGridItem }) {
     return (
-        <div className="flex w-full max-w-[160px] flex-col items-start gap-[16px]">
+        <div className="flex w-full max-w-40 flex-col items-start gap-4">
             <ModalImage src={item.image} alt="" size="card" className="shrink-0" />
 
-            <p className="m-0 w-full font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[1.3px] text-black break-words">
+            <p className="w-full font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[1.3px] text-black break-words">
                 {item.description}
             </p>
 
@@ -176,7 +176,7 @@ export default function StyleSection({
     return (
         <section
             className={cn(
-                "flex flex-col items-center gap-12 bg-white pt-16",
+                "flex flex-col items-center gap-16 bg-white pt-16",
                 className,
             )}
         >
@@ -186,9 +186,9 @@ export default function StyleSection({
                         éclat 12月号掲載
                     </p>
 
-                    <p className="m-0 w-full font-noto-serif-jp leading-[1.6] tracking-[0.05em] text-black">
-                        <span className="text-[26px]">美しい素材とデザインを纏う</span>
-                        <span className="text-[32px]">
+                    <p className="m-0 w-full font-noto-serif-jp leading-[1.6] tracking-[0.15em] text-black">
+                        <span className="text-[23px] md:text-[26px]">美しい素材とデザインを纏う</span>
+                        <span className="text-[29px] md:text-[32px]">
                             <br />
                             大人の名品
                         </span>
@@ -218,14 +218,14 @@ export default function StyleSection({
                         For Your Styling
                     </p>
 
-                    <div className="relative flex w-full flex-col items-center gap-[20px] px-[10px]">
+                    <div className="relative flex w-full flex-col items-center gap-5">
                         {stylingRows.map((row, rowIndex) => (
-                            <div key={rowIndex} className="flex w-full flex-col items-center gap-[20px]">
+                            <div key={rowIndex} className="flex w-full flex-col items-center gap-5 ">
                                 {rowIndex === 0 ? (
                                     <div className="h-px w-full bg-grayCC" aria-hidden />
                                 ) : null}
 
-                                <div className="flex w-full items-center justify-between px-[20px]">
+                                <div className="flex w-full items-center justify-between px-1.5 md:px-5">
                                     {row.map((item, columnIndex) => (
                                         <StylingCard
                                             key={`${item.name}-${rowIndex}-${columnIndex}`}
@@ -249,7 +249,7 @@ export default function StyleSection({
             <div className="outer">
                 <div className="flex flex-col items-center gap-2 bg-background-warm py-[40px] rounded-[4px]">
                     <div className="w-full flex flex-col items-center gap-6 px-3.5">
-                        <p className="text-center font-noto-serif-jp text-[26px] font-semibold leading-[1.6] tracking-[3.9px] text-black">
+                        <p className="text-center font-noto-serif-jp text-[23px] md:text-[26px] font-semibold leading-[1.6] tracking-[3.9px] text-black">
                             上質な一着との出会いは、<br/>ここから。
                         </p>
 

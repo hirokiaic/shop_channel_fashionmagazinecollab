@@ -42,7 +42,7 @@ const ButtonProduct = ({
         >
             <div
                 aria-hidden
-                className={cn("pointer-events-none absolute left-3.5 -top-4 z-10 flex size-[92px] items-center justify-center", leftImageClassName)}
+                className={cn("pointer-events-none absolute left-[2px] md:left-3.5 -top-4 z-10 flex size-[92px] items-center justify-center", leftImageClassName)}
             >
                     <Image
                         src={addBasePathToPath(leftImage)}
@@ -55,7 +55,7 @@ const ButtonProduct = ({
 
             <div
                 aria-hidden
-                className={cn("pointer-events-none absolute right-3.5 -top-3 z-10 flex h-[92px] w-[90px] items-center justify-center", rightImageClassName)}
+                className={cn("pointer-events-none absolute right-0 md:right-3.5 -top-3 z-10 flex h-[92px] w-[90px] items-center justify-center", rightImageClassName)}
             >
                     <Image
                         src={addBasePathToPath(rightImage)}

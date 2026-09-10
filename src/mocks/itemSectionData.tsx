@@ -7,7 +7,7 @@ export const item01SectionData: ItemSectionData = {
         width: 247,
         height: 78,
         className:
-            "pointer-events-none absolute top-[-7px] right-[3px] h-[78px] w-[247px] max-w-none",
+            "pointer-events-none absolute -top-4 sm:top-[-7px] right-[3px] h-[78px] w-[199px] sm:w-[247px] max-w-none",
     },
     heading: (
         <>
@@ -71,13 +71,13 @@ export const item02SectionData: ItemSectionData = {
         width: 138,
         height: 57,
         className:
-            "pointer-events-none absolute top-[-7px] right-[3px] h-[78px] w-[247px] max-w-none",
+            "pointer-events-none absolute -top-4 sm:top-[-7px] right-[3px] h-[78px] w-[208px] sm:w-[247px] max-w-none",
     },
     heading: (
         <>
             羽織るだけで品良く
             <br />
-            イタリア生地ウール×カシミヤコート
+            イタリア生地ウール×カシミヤ<br className="sm:hidden" />コート
         </>
     ),
     mainImages: [

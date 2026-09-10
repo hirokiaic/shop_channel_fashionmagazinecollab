@@ -24,24 +24,24 @@ const CardComment = ({
         >
             <span
                 aria-hidden
-                className="pointer-events-none absolute left-0 top-0 h-[80px] w-[200px] border-l border-t border-black"
+                className="pointer-events-none absolute left-0 top-0 h-20 w-[200px] border-l border-t border-black"
             />
             <span
                 aria-hidden
-                className="pointer-events-none absolute bottom-0 right-0 h-[80px] w-[200px] border-r border-b border-black"
+                className="pointer-events-none absolute bottom-0 right-0 h-20 w-[200px] border-r border-b border-black"
             />
 
-            <div className="flex w-full flex-col items-start gap-[16px] text-black">
-                <div className="w-full font-noto-serif-jp text-[18px] font-bold leading-[1.8] tracking-[0.9px] break-words">
+            <div className="flex w-full flex-col items-start gap-4 text-black">
+                <div className="w-full font-noto-serif-jp text-lg font-bold leading-[1.8]">
                     {heading}
                 </div>
 
-                <p className="m-0 w-full font-noto-sans-jp text-[14px] font-normal leading-[2] tracking-[1.4px] break-words">
+                <p className="m-0 w-full font-noto-sans-jp font-normal tracking-[0.1em]">
                     {children}
                 </p>
             </div>
 
-            <div className="relative flex w-full min-w-full shrink-0 items-end justify-end gap-[8px]">
+            <div className="relative flex w-full min-w-full shrink-0 items-end justify-end gap-2">
                 <p className="m-0 font-noto-sans-jp text-[13px] font-normal leading-[1.8] tracking-[1.3px] text-black whitespace-nowrap relative">
                     {signature}
 
@@ -54,7 +54,7 @@ const CardComment = ({
                         alt=""
                         width={135}
                         height={44}
-                        className="w-[119px] max-w-none absolute right-full bottom-0"
+                        className="w-[119px] max-w-none absolute right-[92%] sm:right-full bottom-0"
                     />
                 </span>
                 </p>

@@ -36,7 +36,7 @@ export default function InfoSection({
     return (
         <section
             className={cn(
-                "inner flex flex-col items-center gap-6 py-16",
+                "inner flex flex-col items-center gap-6 py-12 md:py-16",
                 className,
             )}
         >

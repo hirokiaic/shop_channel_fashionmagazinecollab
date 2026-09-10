@@ -7,6 +7,7 @@ import ScrollAnchor from "@/components/scrollAnchor";
 import FidLinkInterceptor from "@/components/fidLinkInterceptor";
 import { ExpiredProvider } from "./Context/expiredContext";
 import { cn } from "@/lib/utils";
+import { GTMChecker } from "@/components/GTMChecker";
 
 const noto_serif_jp = Noto_Serif_JP({
     weight: ["400", "500", "600", "700", "800"],
@@ -62,14 +63,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 shippori_mincho.variable,
             )}
         >
-            <body className="min-h-full flex flex-col"> {/* <GTMChecker /> */}
+            <body className="min-h-full flex flex-col">
+                <GTMChecker />
                 <Header />
-                {/* <MenuSP /> */}
+                <MenuSP />
                 <ScrollAnchor />
                 <FidLinkInterceptor />
                 <ExpiredProvider>
                     {children}
-                </ExpiredProvider></body>
+                </ExpiredProvider>
+            </body>
         </html>
     );
 }

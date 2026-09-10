@@ -23,7 +23,7 @@ export default function PageTop() {
             <div className="relative flex h-full bg-background-blush -mt-px">
                 <BgSticky className="hidden lg:block" />
 
-                <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)] border-x border-black">
+                <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)] outline outline-1 outline-black -outline-offset-1">
                     <IntroSection />
 
                     <AnchorSection />

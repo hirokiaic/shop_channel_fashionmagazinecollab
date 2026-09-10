@@ -5,18 +5,18 @@ import type { ReactNode } from "react";
 const variantStyles = {
     default: {
         button:
-            "h-[48px] w-full max-w-[392px] text-[18px] tracking-[0.9px]",
-        icon: "left-[24px] top-[12px]",
+            "h-12 w-full max-w-[392px] text-lg tracking-[0.9px]",
+        icon: "left-26 top-3",
     },
     small: {
         button:
-            "h-[40px] w-full max-w-[140px] text-[16px] tracking-[0.8px]",
-        icon: "left-[8px] top-[8px]",
+            "h-10 w-full max-w-[140px] text-base tracking-[0.8px]",
+        icon: "left-2 top-2",
     },
     back: {
         button:
-            "h-[56px] w-full max-w-none font-noto-sans-jp text-[16px] font-medium leading-[1.8] tracking-[1.6px]",
-        icon: "left-[24px] top-1/2 -translate-y-1/2",
+            "h-14 w-full max-w-none font-noto-sans-jp text-base font-medium leading-[1.8] tracking-[1.6px]",
+        icon: "left-3 md:left-6 top-1/2 -translate-y-1/2",
     },
 } as const;
 

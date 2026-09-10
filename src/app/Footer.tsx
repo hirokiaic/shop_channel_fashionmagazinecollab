@@ -11,7 +11,7 @@ const Footer = ({ className, ...props }: FooterProps) => {
 
 
     return (
-        <div className={cn("w-full pb-14 lg:pb-0", className)}
+        <div className={cn("w-full", className)}
             {...props}
         >
              <Link href="#main" className="p-4 flex items-baseline justify-center bg-black text-white font-gilda-display gap-4
