@@ -45,7 +45,7 @@ export function ContentMenu({ onClose }: ContentMenuProps) {
             exit="hidden"
             onClick={(e) => e.stopPropagation()}
         >
-            <motion.div variants={item} className="w-full w-full flex flex-col gap-8 mt-[30%]" onClick={onClose}>
+            <motion.div variants={item} className="w-full w-full flex flex-col gap-8" onClick={onClose}>
 
                 <div className="mx-auto flex w-full max-w-[340px] flex-col items-center px-4">
                     <div className="flex w-full flex-col items-end gap-[16px]">
