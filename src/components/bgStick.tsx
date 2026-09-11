@@ -9,6 +9,9 @@ import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
+import { useDomain } from "@/hooks/use-domain";
+import { useUrlParam } from "@/hooks/use-urlParams";
+import { useExpired } from "@/app/Context/expiredContext";
 
 const SLIDES = [
     {
@@ -26,9 +29,19 @@ type BgStickyProps = {
 };
 
 const BgSticky = ({ className, ...props }: BgStickyProps) => {
+
+    const day = useUrlParam('day');
+    const { expiredMap } = useExpired();
+    const isExpired = (key: string) => expiredMap[key] ?? false;
+    const { isProd } = useDomain();
+
+    // const phase1 = isExpired("phase1")
+    const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
+
     return (
         <div className={cn("absolute top-0 w-full h-full", className)} {...props} >
 
+            {!previewDay10_20 && (
             <div className="sticky top-0 h-screen overflow-hidden">
                 {/* right */}
                 <div className="absolute top-[18%] right-0 hidden w-[calc((100vw-440px)/2)] lg:block">
@@ -119,6 +132,7 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
                     </div>
                 </div>
             </div>
+            )}
         </div>
     );
 };
