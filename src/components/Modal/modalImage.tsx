@@ -56,7 +56,6 @@ const ModalImage = ({
 }: ModalImageProps) => {
     const styles = sizeStyles[size];
     const [open, setOpen] = useState(false);
-    const labelId = useId();
     const imageSrc = addBasePathToPath(src);
 
     useEffect(() => {
@@ -92,7 +91,6 @@ const ModalImage = ({
                       <div
                           role="dialog"
                           aria-modal="true"
-                          aria-labelledby={labelId}
                           className="relative z-10 w-full max-w-[420px] bg-white px-5 pb-10 pt-4"
                           onClick={(event) => event.stopPropagation()}
                       >
@@ -113,9 +111,8 @@ const ModalImage = ({
                           </div>
 
                           <div
-                              id={labelId}
                               className={cn(
-                                  "relative mx-auto w-full",
+                                  "relative mx-auto w-full mt-3",
                                   styles.modalImage,
                               )}
                           >
