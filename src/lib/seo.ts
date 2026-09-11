@@ -1,5 +1,17 @@
 import type { Metadata } from "next";
 
+export const productionSiteBaseUrl = "https://30th.shopch.jp/spcl06";
+export const testSiteBaseUrl = "https://shop-channel-fashionmagazinecollab.vercel.app";
+
+export const isVercelDeployment = process.env.VERCEL === "1";
+export const isProductionSite =
+    process.env.PRODUCTION === "production" && !isVercelDeployment;
+
+export const siteBaseUrl = isVercelDeployment
+    ? testSiteBaseUrl
+    : productionSiteBaseUrl;
+
+
 interface MetadataParams {
     title?: string;
     description?: string;
@@ -52,8 +64,8 @@ export function getMetadata({
             images: [imageUrl],
         },
         robots: {
-            index: process.env.PRODUCTION === 'production',
-            follow: process.env.PRODUCTION === 'production'
+            index: isProductionSite,
+            follow: isProductionSite,
         },
     };
 }

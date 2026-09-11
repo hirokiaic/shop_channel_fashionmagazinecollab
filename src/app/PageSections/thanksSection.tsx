@@ -53,20 +53,24 @@ export default function ThanksSection({
 
                     {/* sp */}
                     <Button
+                        id="spcl06_footer_30th_sp"
                         href={thanksBackLinkSp}
                         variant="back"
                         isExtLink
                         className="w-full lg:hidden"
+                        data-shopch-link
                     >
                         30周年特設サイトへ戻る
                     </Button>
 
                     {/* pc */}
                     <Button
+                        id="spcl06_footer_30th_pc"
                         href={thanksBackLinkPc}
                         variant="back"
                         isExtLink
                         className="hidden w-full lg:flex"
+                        data-shopch-link
                     >
                         30周年特設サイトへ戻る
                     </Button>

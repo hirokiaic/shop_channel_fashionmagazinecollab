@@ -12,6 +12,7 @@ export type StyleFeaturedImages = {
 };
 
 export type StyleFeaturedItem = {
+    id: string;
     images: StyleFeaturedImages;
     description: string;
     name: ReactNode;
@@ -21,6 +22,7 @@ export type StyleFeaturedItem = {
 };
 
 export type StyleGridItem = {
+    id: string;
     image: string;
     description: string;
     name: string;
@@ -106,6 +108,7 @@ function FeaturedItemRow({
                         </p>
 
                         <Button
+                            id={item.id}
                             href={item.buyHref}
                             variant="small"
                             className="shrink-0"
@@ -143,6 +146,7 @@ function StylingCard({ item }: { item: StyleGridItem }) {
             <div className="flex w-full flex-col items-start leading-[1.8]">
                 {item.buyHref ? (
                     <a
+                        id={item.id}
                         href={item.buyHref}
                         className="font-noto-sans-jp text-[12px] font-medium tracking-[1.2px] text-black underline"
                     >

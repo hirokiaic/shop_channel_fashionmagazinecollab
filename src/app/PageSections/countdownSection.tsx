@@ -25,9 +25,9 @@ const CountdownSection = ({
         >
             <div className="relative z-10 flex min-h-full w-full flex-col items-center justify-center px-5 py-10">
                 <div className="flex w-full max-w-[1080px] flex-col items-center">
-                    <div className="flex w-full max-w-[593px] flex-col items-center">
+                    <div className="flex w-full max-w-[593px] flex-col items-center gap-6">
                         <Image
-                            src={addBasePathToPath("/images/eclat-shop-channel-logo.svg")}
+                            src={addBasePathToPath("/images/eclat-shop-channel-logo-countdown.svg")}
                             alt="éclat × SHOP CHANNEL"
                             width={593}
                             height={100}
