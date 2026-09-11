@@ -27,6 +27,19 @@ export const item01SectionData: ItemSectionData = {
         },
     ],
     product: {
+        id: "spcl06_buy_item01_top",
+        name: (
+            <>
+                éclatコラボレーション
+                <br />
+                無染色カシミヤ Vネックニットプルオーバー
+            </>
+        ),
+        price: "¥36,000",
+        buyHref: "#",
+    },
+    detailProduct: {
+        id: "spcl06_buy_item01_bottom",
         name: (
             <>
                 éclatコラボレーション
@@ -91,6 +104,19 @@ export const item02SectionData: ItemSectionData = {
         },
     ],
     product: {
+        id: "spcl06_buy_item02_top",
+        name: (
+            <>
+                éclatコラボレーション
+                <br />
+                ウールカシミヤダブルブレストロングコート
+            </>
+        ),
+        price: "¥129,000",
+        buyHref: "#",
+    },
+    detailProduct: {
+        id: "spcl06_buy_item02_bottom",
         name: (
             <>
                 éclatコラボレーション

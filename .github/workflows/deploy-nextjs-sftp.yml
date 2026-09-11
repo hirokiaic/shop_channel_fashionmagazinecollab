@@ -1,0 +1,49 @@
+name: Build and Deploy Next.js via SFTP
+
+on:
+  push:
+    branches:
+      - env/production
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.24.0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
+          PRODUCTION: "production"
+        run: pnpm run build
+
+      - name: Remove robots.txt from production deploy
+        run: rm -f out/robots.txt
+
+      - name: Upload files via SFTP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          key: ${{ secrets.SFTP_PRIVATE_KEY }}
+          port: ${{ secrets.SFTP_PORT }}
+          source: "out/**"
+          strip_components: 1
+          target: "/var/www/30th.shopch.jp/spcl06"
+          overwrite: true

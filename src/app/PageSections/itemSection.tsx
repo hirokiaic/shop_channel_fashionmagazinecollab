@@ -24,6 +24,7 @@ export type ItemSectionDetail = {
 };
 
 export type ItemSectionProduct = {
+    id: string;
     name: ReactNode;
     price: string;
     buyHref: string;
@@ -41,6 +42,7 @@ export type ItemSectionData = {
     heading: ReactNode;
     mainImages: ItemSectionImage[];
     product: ItemSectionProduct;
+    detailProduct: ItemSectionProduct;
     comment: ItemSectionComment;
     details: ItemSectionDetail[];
     note: string;
@@ -72,7 +74,7 @@ function ProductBlock({
                 </p>
             </div>
 
-            <Button href={product.buyHref} className="w-full max-w-none">
+            <Button id={product.id} href={product.buyHref} className="w-full max-w-none">
                 BUY
             </Button>
         </div>
@@ -85,6 +87,7 @@ export default function ItemSection({
     heading,
     mainImages,
     product,
+    detailProduct,
     comment,
     details,
     note,
@@ -180,7 +183,7 @@ export default function ItemSection({
                         </div>
 
                         <div className="flex w-full flex-col items-start gap-[16px]">
-                            <ProductBlock product={product} />
+                            <ProductBlock product={detailProduct} />
 
                             <Notes>{note}</Notes>
                         </div>
