@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const LOADING_DISPLAY_MS = 2;
+const LOADING_DISPLAY_MS = 2500;
 const FADE_DURATION = 0.8;
 
 type TeaserContentProps = {
