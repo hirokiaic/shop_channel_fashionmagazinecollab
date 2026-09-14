@@ -24,7 +24,7 @@ export function useDomain() {
 
     return {
         hostname,
-        isTest: hostname === 'shop-channel.vercel.app',
+        isTest: hostname === 'shop-channel-fashionmagazinecollab.vercel.app',
         isProd: hostname === '30th.shopch.jp',
         isLocalhost: hostname === 'localhost',
     };
