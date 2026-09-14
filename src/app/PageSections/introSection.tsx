@@ -21,8 +21,8 @@ export default function IntroSection({ className }: IntroSectionProps) {
                     </p>
 
                     <p className="text-[38px] leading-[1.6] tracking-[0.15em] text-black font-noto-serif-jp">
-                        <span>上質を愉しむ</span>
-                        <span className="max-sm:-ml-5">「大人の名品」</span>
+                        <span>上質を愉しむ</span><br/>
+                        <span className="-ml-5">「大人の名品」</span>
                     </p>
                 </div>
 
