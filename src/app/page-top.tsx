@@ -17,6 +17,7 @@ import { useIsClient } from "@/hooks/use-is-client";
 import { useUrlParam } from "@/hooks/use-urlParams";
 import { useExpired } from "./Context/expiredContext";
 import TeaserContent from "./PageSections/teaserContent";
+import { cn } from "@/lib/utils";
 
 function HeroPlaceholder() {
     return (
@@ -57,7 +58,7 @@ export default function PageTop() {
                 <BgSticky className="hidden lg:block" />
 
                 <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)] outline outline-1 outline-black -outline-offset-1">
-                    <IntroSection />
+                    <IntroSection className={cn(previewDay10_20 ? "pb-20" : "")} />
 
                     {isClient && !previewDay10_20 && (
                         <>
