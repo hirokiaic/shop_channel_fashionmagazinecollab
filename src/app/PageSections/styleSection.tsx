@@ -13,6 +13,7 @@ export type StyleFeaturedImages = {
 
 export type StyleFeaturedItem = {
     id: string;
+    sectionId: string;
     images: StyleFeaturedImages;
     description: string;
     name: ReactNode;
@@ -31,6 +32,7 @@ export type StyleGridItem = {
 };
 
 export type StyleProductButton = {
+    id: string;
     href: string;
     leftImage: string;
     rightImage: string;
@@ -60,6 +62,7 @@ function FeaturedItemRow({
 }) {
     return (
         <div
+            id={item.sectionId}
             className={cn(
                 "flex w-full flex-col items-center gap-5 border-t border-grayCC px-1.5 md:px-5 py-6",
                 isLast && "border-b",
@@ -217,7 +220,7 @@ export default function StyleSection({
                     ))}
                 </div>
 
-                <div className="flex w-full flex-col items-start gap-10">
+                <div id="other-item" className="flex w-full flex-col items-start gap-10">
                     <p className="m-0 w-full text-center font-amiri text-[32px] leading-[1.4] tracking-[3.2px] text-pink-brown-dark">
                         For Your Styling
                     </p>
