@@ -69,7 +69,7 @@ const ButtonProduct = ({
                     />
             </div>
 
-            <span className="z-[1] flex w-full flex-col items-center gap-3.5 rounded-[4px] border border-black bg-white pt-4 pb-3 pl-1">
+            <span className="z-[1] flex w-full flex-col items-center gap-3.5 rounded-[4px] border border-black bg-white pt-4 pb-[22px] pl-1">
                 <span className="font-noto-sans-jp text-[14px] font-medium leading-[1.8] tracking-[1.4px] text-black whitespace-nowrap">
                     {children}
                 </span>

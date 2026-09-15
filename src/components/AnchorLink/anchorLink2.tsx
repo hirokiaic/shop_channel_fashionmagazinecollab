@@ -18,6 +18,7 @@ type AnchorLink2Props = {
     imageSrc?: string;
     imageAlt?: string;
     className?: string;
+    isActive?: boolean;
 };
 
 const AnchorLink2 = ({
@@ -26,9 +27,12 @@ const AnchorLink2 = ({
     imageSrc = "/images/temp.png",
     imageAlt = "",
     className,
+    isActive = false,
 }: AnchorLink2Props) => {
     const numberImage = numberImages[number];
     const numberSize = numberImageSizes[number];
+
+    // console.log("isActive:", isActive);
 
     return (
         <a
@@ -37,7 +41,8 @@ const AnchorLink2 = ({
                 "flex w-full max-w-[392px] items-start justify-between",
                 "no-underline outline-none",
                 "focus:outline-none focus-visible:outline-none",
-                className,
+                "anchorlink",
+                className
             )}
         >
             <div className="flex shrink-0 flex-col items-start pt-[8px]">
@@ -55,12 +60,18 @@ const AnchorLink2 = ({
                     />
 
                     <div className="col-start-1 row-start-1 mt-[39px] flex w-[119px] flex-col items-start">
-                        <span className="font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap">
+                        <span className={cn(
+                            "font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap",
+                            isActive && "underline"
+                        )}>
                             COLLABORATION
                         </span>
 
                         <span className="flex h-[26px] items-center gap-[12px]">
-                            <span className="font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap">
+                            <span className={cn(
+                                "font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap",
+                                isActive && "underline"
+                            )}>
                                 ITEM #{number}
                             </span>
                             <IconSvg
