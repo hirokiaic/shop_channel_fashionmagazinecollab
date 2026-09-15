@@ -15,7 +15,7 @@ import { useExpired } from "@/app/Context/expiredContext";
 import { useIsClient } from "@/hooks/use-is-client";
 import { useEffect, useState } from "react";
 
-const COLLABORATION_SECTION_IDS = ["collaboration-01", "collaboration-02"] as const;
+const COLLABORATION_SECTION_IDS = ["collaboration-01", "collaboration-02", "cotton-cashmere-top", "semi-wide-jeans", "cardigan", "check-stole", "other-item"] as const;
 
 const SLIDES = [
     {
@@ -160,23 +160,43 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
                             </div>
 
                             <div className="mt-[24px] flex w-full flex-col items-start gap-[10px] pr-[20px]">
-                                <AnchorLink3 href="#cotton-cashmere-top" className="w-full max-w-none">
+                                <AnchorLink3
+                                    href="#cotton-cashmere-top"
+                                    className="w-full max-w-none"
+                                    isActive={activeSection === "cotton-cashmere-top"}
+                                >
                                     COTTON CASHMERE TOP
                                 </AnchorLink3>
 
-                                <AnchorLink3 href="#semi-wide-jeans" className="w-full max-w-none">
+                                <AnchorLink3
+                                    href="#semi-wide-jeans"
+                                    className="w-full max-w-none"
+                                    isActive={activeSection === "semi-wide-jeans"}
+                                >
                                     SEMI - WIDE JEANS
                                 </AnchorLink3>
 
-                                <AnchorLink3 href="#cardigan" className="w-full max-w-none">
+                                <AnchorLink3
+                                    href="#cardigan"
+                                    className="w-full max-w-none"
+                                    isActive={activeSection === "cardigan"}
+                                >
                                     CARDIGAN
                                 </AnchorLink3>
 
-                                <AnchorLink3 href="#check-stole" className="w-full max-w-none">
+                                <AnchorLink3
+                                    href="#check-stole"
+                                    className="w-full max-w-none"
+                                    isActive={activeSection === "check-stole"}
+                                >
                                     CHECK STOLE
                                 </AnchorLink3>
 
-                                <AnchorLink3 href="#other-item" className="w-full max-w-none">
+                                <AnchorLink3
+                                    href="#other-item"
+                                    className="w-full max-w-none"
+                                    isActive={activeSection === "other-item"}
+                                >
                                     OTHER ITEM
                                 </AnchorLink3>
                             </div>

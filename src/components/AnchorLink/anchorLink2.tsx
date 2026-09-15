@@ -21,6 +21,15 @@ type AnchorLink2Props = {
     isActive?: boolean;
 };
 
+const activeTextClassName = (isActive: boolean) =>
+    cn(
+        "relative shrink-0 whitespace-nowrap",
+        "font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black",
+        "after:absolute after:bottom-0 after:left-0 after:block after:h-px after:w-full after:bg-black after:content-['']",
+        "after:transition-opacity after:duration-300 after:ease-out",
+        isActive ? "after:opacity-100" : "after:opacity-0",
+    );
+
 const AnchorLink2 = ({
     href,
     number = "01",
@@ -31,8 +40,6 @@ const AnchorLink2 = ({
 }: AnchorLink2Props) => {
     const numberImage = numberImages[number];
     const numberSize = numberImageSizes[number];
-
-    // console.log("isActive:", isActive);
 
     return (
         <a
@@ -60,18 +67,12 @@ const AnchorLink2 = ({
                     />
 
                     <div className="col-start-1 row-start-1 mt-[39px] flex w-[119px] flex-col items-start">
-                        <span className={cn(
-                            "font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap",
-                            isActive && "underline"
-                        )}>
+                        <span className={activeTextClassName(isActive)}>
                             COLLABORATION
                         </span>
 
                         <span className="flex h-[26px] items-center gap-[12px]">
-                            <span className={cn(
-                                "font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap",
-                                isActive && "underline"
-                            )}>
+                            <span className={activeTextClassName(isActive)}>
                                 ITEM #{number}
                             </span>
                             <IconSvg
