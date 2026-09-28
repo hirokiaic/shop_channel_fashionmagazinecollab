@@ -1,13 +1,11 @@
 "use client";
 
-import { Separator } from "@/components/ui/separator";
 import { addBasePathToPath, cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const LOADING_DISPLAY_MS = 2500;
+const LOADING_DISPLAY_MS = 1500;
 const FADE_DURATION = 0.8;
 
 type TeaserContentProps = {
@@ -38,23 +36,37 @@ function TeaserLoading() {
     );
 }
 
+const TEASER_IMG_SP_PATH = "/images/teaser/img-sp.webp";
+
 type TeaserImageProps = {
     src: string;
     alt: string;
+    width: number;
+    height: number;
     className?: string;
     sizes: string;
+    priority?: boolean;
 };
 
-function TeaserImage({ src, alt, className, sizes }: TeaserImageProps) {
+function TeaserImage({
+    src,
+    alt,
+    width,
+    height,
+    className,
+    sizes,
+    priority,
+}: TeaserImageProps) {
     return (
-        <div className={cn("relative overflow-hidden", className)}>
+        <div className={cn("relative w-full", className)}>
             <Image
                 src={addBasePathToPath(src)}
                 alt={alt}
-                width={1920}
-                height={1920}
+                width={width}
+                height={height}
                 sizes={sizes}
-                className="object-cover"
+                priority={priority}
+                className="h-auto w-full"
             />
         </div>
     );
@@ -102,6 +114,8 @@ function TeaserMain() {
                 <TeaserImage
                     src="/images/teaser/img-left.webp"
                     alt=""
+                    width={680}
+                    height={1100}
                     sizes="270px"
                     className="w-full max-w-[340px] hidden md:block"
                 />
@@ -128,9 +142,12 @@ function TeaserMain() {
                     <DateFrame />
 
                     <TeaserImage
-                        src="/images/teaser/img-sp.webp"
+                        src={TEASER_IMG_SP_PATH}
                         alt=""
+                        width={630}
+                        height={961}
                         sizes="270px"
+                        priority
                         className="w-full max-w-[315px] md:hidden mt-2"
                     />
                 </div>
@@ -138,6 +155,8 @@ function TeaserMain() {
                 <TeaserImage
                     src="/images/teaser/img-right.webp"
                     alt=""
+                    width={680}
+                    height={1100}
                     sizes="270px"
                     className="w-full max-w-[340px] hidden md:block"
                 />
@@ -151,6 +170,12 @@ export default function TeaserContent({
     loadingDurationMs = LOADING_DISPLAY_MS,
 }: TeaserContentProps) {
     const [phase, setPhase] = useState<"loading" | "main">("loading");
+
+    // Preload the teaser image for faster loading on mobile
+    useEffect(() => {
+        const img = new window.Image();
+        img.src = addBasePathToPath(TEASER_IMG_SP_PATH);
+    }, []);
 
     useEffect(() => {
         const timer = window.setTimeout(() => {
