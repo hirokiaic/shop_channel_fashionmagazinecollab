@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { addBasePathToPath } from "@/lib/utils";
-import AnchorLink from "../AnchorLink/anchorLink";
-import SubAnchorLink from "../AnchorLink/subAnchorLink";
 import AnchorLink2 from "../AnchorLink/anchorLink2";
 import AnchorLink3 from "../AnchorLink/anchorLink3";
+
 // import AnchorLinkMenu from "../AnchorLink/anchorLinkMenu";
 // import AnchorLinkMenuSub from "../AnchorLink/anchorLinkMenuSub";
 
@@ -13,6 +10,7 @@ type ContentMenuProps = {
 };
 
 export function ContentMenu({ onClose }: ContentMenuProps) {
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -62,7 +60,7 @@ export function ContentMenu({ onClose }: ContentMenuProps) {
                             number="02"
                             imageSrc="/images/collab-item-2.webp"
                             imageAlt="Collaboration item 02"
-                            className="w-full [&>span:last-child]:opacity-40"
+                            className="w-full"
                         />
                     </div>
 

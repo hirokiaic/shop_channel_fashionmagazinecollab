@@ -104,7 +104,7 @@ export default function MVContent({ className }: MVContentProps) {
                 >
                     <motion.div
                         variants={logoReveal}
-                        className="w-full max-w-[593px] origin-center"
+                        className="w-full max-w-[343px] md:max-w-[593px] origin-center"
                     >
                         <Image
                             src={addBasePathToPath("/images/eclat-shop-channel-logo.svg")}

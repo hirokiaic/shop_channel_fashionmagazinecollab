@@ -12,6 +12,7 @@ export const styleSectionData: StyleSectionData = {
     featuredItems: [
         {
             id: "spcl06_buy_magazine_item01",
+            sectionId: "cotton-cashmere-top",
             images: featuredImages,
             description:
                 "有名メゾンが認める老舗ファクトリー「エイガールズ」の日本製リブトップス。コットン90%×カシミヤ10%の優雅な肌触り、ラインを拾いすぎない編地設計。",
@@ -22,6 +23,7 @@ export const styleSectionData: StyleSectionData = {
         },
         {
             id: "spcl06_buy_magazine_item02",
+            sectionId: "semi-wide-jeans",
             images: featuredImages,
             description:
                 "「DOCTOR DENIM HONZAWA」本澤氏による渾身の一本。カイハラ社製のコットンデニムに、腰周りすっきり、深めの股上。立体パターンが叶える快適な穿き心地。細部までこだわり抜いた、本格デニム。",
@@ -31,6 +33,7 @@ export const styleSectionData: StyleSectionData = {
         },
         {
             id: "spcl06_buy_magazine_item03",
+            sectionId: "cardigan",
             images: featuredImages,
             description:
                 "極細メリノウール100％が叶える、上質な肌触りと美しい光沢。滑らかな編み上がりで、軽やかな着心地。きちんと感のあるシャツカラー仕立て。貝ボタンと配色使いで表情豊かに。",
@@ -46,6 +49,7 @@ export const styleSectionData: StyleSectionData = {
         },
         {
             id: "spcl06_buy_magazine_item04",
+            sectionId: "check-stole",
             images: featuredImages,
             description:
                 "スコットランドの名門ロキャロン社のエクストラファインメリノウール100%。世界で愛される逸品。ハリとコシのある軽やかさ。職人技が生み出す美しい光沢感。羽織るだけでラグジュアリーに。",
@@ -122,6 +126,7 @@ export const styleSectionData: StyleSectionData = {
         },
     ],
     productButton: {
+        id: "spcl06_all_items",
         href: "https://www.shopch.jp/",
         leftImage: "/images/product-btn-img1.webp",
         rightImage: "/images/product-btn-img2.webp",

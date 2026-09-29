@@ -11,8 +11,8 @@ const ExpiredContext = createContext<{
 export function ExpiredProvider({ children }: { children: React.ReactNode }) {
 
     const expirationDates: Record<string, number> = {
-        //
-        // phase1: new Date("2026-06-09T13:00:00+09:00").getTime(),
+        //TeaserからMVに変更（公開する）
+        phase1: new Date("2026-10-30T00:00:00+09:00").getTime(),
     };
     const [expiredMap, setExpiredMap] = useState<Record<string, boolean>>({});
 

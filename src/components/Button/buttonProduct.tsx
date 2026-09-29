@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 type ButtonProductProps = {
+    id?: string;
     href: string;
     leftImage: string;
     rightImage: string;
@@ -20,6 +21,7 @@ const buttonProductClassName =
     "relative block w-full max-w-[392px] h-[96px] no-underline outline-none transition-opacity duration-300 ease-out hover:opacity-80 focus:outline-none focus-visible:outline-none";
 
 const ButtonProduct = ({
+    id,
     href,
     leftImage,
     rightImage,
@@ -34,6 +36,7 @@ const ButtonProduct = ({
 }: ButtonProductProps) => {
     return (
         <a
+            id={id}
             href={href}
             className={cn(buttonProductClassName, className)}
             target={isExtLink ? "_blank" : undefined}
@@ -66,7 +69,7 @@ const ButtonProduct = ({
                     />
             </div>
 
-            <span className="z-[1] flex w-full flex-col items-center gap-3.5 rounded-[4px] border border-black bg-white pt-4 pb-3 pl-1">
+            <span className="z-[1] flex w-full flex-col items-center gap-3.5 rounded-[4px] border border-black bg-white pt-4 pb-[22px] pl-1">
                 <span className="font-noto-sans-jp text-[14px] font-medium leading-[1.8] tracking-[1.4px] text-black whitespace-nowrap">
                     {children}
                 </span>

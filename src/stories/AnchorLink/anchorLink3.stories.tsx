@@ -31,6 +31,9 @@ const meta = {
         href: {
             control: "text",
         },
+        isActive: {
+            control: "boolean",
+        },
     },
 } satisfies Meta<typeof AnchorLink3>;
 
@@ -40,3 +43,9 @@ type Story = StoryObj<typeof meta>;
 
 /** Figma 46001:2107 */
 export const Default: Story = {};
+
+export const Active: Story = {
+    args: {
+        isActive: true,
+    },
+};

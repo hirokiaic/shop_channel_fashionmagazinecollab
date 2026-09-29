@@ -18,7 +18,17 @@ type AnchorLink2Props = {
     imageSrc?: string;
     imageAlt?: string;
     className?: string;
+    isActive?: boolean;
 };
+
+const activeTextClassName = (isActive: boolean) =>
+    cn(
+        "relative shrink-0 whitespace-nowrap",
+        "font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black",
+        "after:absolute after:bottom-0 after:left-0 after:block after:h-px after:w-full after:bg-black after:content-['']",
+        "after:transition-opacity after:duration-300 after:ease-out",
+        isActive ? "after:opacity-100" : "after:opacity-0",
+    );
 
 const AnchorLink2 = ({
     href,
@@ -26,6 +36,7 @@ const AnchorLink2 = ({
     imageSrc = "/images/temp.png",
     imageAlt = "",
     className,
+    isActive = false,
 }: AnchorLink2Props) => {
     const numberImage = numberImages[number];
     const numberSize = numberImageSizes[number];
@@ -37,7 +48,8 @@ const AnchorLink2 = ({
                 "flex w-full max-w-[392px] items-start justify-between",
                 "no-underline outline-none",
                 "focus:outline-none focus-visible:outline-none",
-                className,
+                "anchorlink",
+                className
             )}
         >
             <div className="flex shrink-0 flex-col items-start pt-[8px]">
@@ -55,12 +67,12 @@ const AnchorLink2 = ({
                     />
 
                     <div className="col-start-1 row-start-1 mt-[39px] flex w-[119px] flex-col items-start">
-                        <span className="font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap">
+                        <span className={activeTextClassName(isActive)}>
                             COLLABORATION
                         </span>
 
                         <span className="flex h-[26px] items-center gap-[12px]">
-                            <span className="font-jost text-[15px] font-medium leading-[1.7] tracking-[0.75px] text-black whitespace-nowrap">
+                            <span className={activeTextClassName(isActive)}>
                                 ITEM #{number}
                             </span>
                             <IconSvg

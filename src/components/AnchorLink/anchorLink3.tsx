@@ -5,9 +5,15 @@ import type { ReactNode } from "react";
 type AnchorLink3Props = {
     children: ReactNode;
     className?: string;
+    isActive?: boolean;
 } & Omit<React.ComponentPropsWithoutRef<"a">, "children">;
 
-const AnchorLink3 = ({ children, className, ...props }: AnchorLink3Props) => {
+const AnchorLink3 = ({
+    children,
+    className,
+    isActive = false,
+    ...props
+}: AnchorLink3Props) => {
     return (
         <a
             className={cn(
@@ -19,7 +25,16 @@ const AnchorLink3 = ({ children, className, ...props }: AnchorLink3Props) => {
             )}
             {...props}
         >
-            <span className="shrink-0 whitespace-nowrap">{children}</span>
+            <span
+                className={cn(
+                    "relative shrink-0 whitespace-nowrap",
+                    "after:absolute after:bottom-0 after:left-0 after:block after:h-px after:w-full after:bg-black after:content-['']",
+                    "after:transition-opacity after:duration-300 after:ease-out",
+                    isActive ? "after:opacity-100" : "after:opacity-0",
+                )}
+            >
+                {children}
+            </span>
 
             <IconSvg
                 iconSrc="/images/icon-arrow.svg"

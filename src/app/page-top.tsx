@@ -12,38 +12,76 @@ import InfoSection from "./PageSections/infoSection";
 import ThanksSection from "./PageSections/thanksSection";
 import { item01SectionData, item02SectionData } from "../mocks/itemSectionData";
 import { styleSectionData } from "../mocks/styleSectionData";
+import { useDomain } from "@/hooks/use-domain";
+import { useIsClient } from "@/hooks/use-is-client";
+import { useUrlParam } from "@/hooks/use-urlParams";
+import { useExpired } from "./Context/expiredContext";
+import TeaserContent from "./PageSections/teaserContent";
+import { cn } from "@/lib/utils";
+
+function HeroPlaceholder() {
+    return (
+        <div
+            className="min-h-screen bg-background-warm"
+            aria-hidden
+        />
+    );
+}
 
 export default function PageTop() {
-        return (
+    // isClient: garantee that the component is only rendered on the client side
+    const isClient = useIsClient();
+    const day = useUrlParam("day");
+    const { expiredMap } = useExpired();
+    const isExpired = (key: string) => expiredMap[key] ?? false;
+    const { isProd } = useDomain();
+
+    const previewDay10_20 =
+        isClient &&
+        !isProd &&
+        !isExpired("phase1") &&
+        day === "10/20";
+
+    return (
         <main id="main">
             <div className="relative z-[1] overflow-hidden">
-                <MVContent />
+                {!isClient ? (
+                    <HeroPlaceholder />
+                ) : previewDay10_20 ? (
+                    <TeaserContent />
+                ) : (
+                    <MVContent />
+                )}
             </div>
 
             <div className="relative flex h-full bg-background-blush -mt-px">
                 <BgSticky className="hidden lg:block" />
 
                 <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)] outline outline-1 outline-black -outline-offset-1">
-                    <IntroSection />
+                    <IntroSection className={cn(previewDay10_20 ? "pb-20" : "")} />
 
-                    <AnchorSection />
+                    {isClient && !previewDay10_20 && (
+                        <>
+                            <AnchorSection />
 
-                    <ItemSection {...item01SectionData} />
+                            <ItemSection {...item01SectionData} />
 
-                    <Separator className="w-full h-px bg-grayCC" />
+                            <Separator className="w-full h-px bg-grayCC" />
 
-                    <ItemSection {...item02SectionData} />
+                            <ItemSection {...item02SectionData} />
 
-                    <StyleSection {...styleSectionData} />
+                            <StyleSection {...styleSectionData} />
 
-                    <InfoSection />
+                            <InfoSection />
 
-                    <ThanksSection />
+                            <ThanksSection />
+                        </>
+                    )}
 
                     <Footer id="footer" />
                 </div>
             </div>
 
-        </main>
+        </main >
     );
 }
