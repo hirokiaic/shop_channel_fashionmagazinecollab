@@ -97,10 +97,10 @@ function DateFrame() {
                 <span className="text-[32px] md:text-[35px] font-normal">START</span>
             </p>
 
-            <p className="m-0 font-jost text-2xl md:text-[28px] font-normal leading-[1.7] tracking-[1.4px]">
+            <p className="m-0 font-jost text-xl lg:text-[28px] font-normal leading-[1.7] tracking-[1.4px]">
                 2026.10.30{" "}
                 <span className="text-base md:text-lg">(fri) </span>
-                10:00
+                10:00 AM
             </p>
         </div>
     );
