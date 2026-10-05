@@ -29,6 +29,7 @@ export type StyleGridItem = {
     name: string;
     price: string;
     buyHref?: string;
+    notes?: string;
 };
 
 export type StyleProductButton = {
@@ -167,6 +168,8 @@ function StylingCard({ item }: { item: StyleGridItem }) {
                         (税込)
                     </span>
                 </p>
+
+                {item.notes ? <Notes>{item.notes}</Notes> : null}
             </div>
         </div>
     );
