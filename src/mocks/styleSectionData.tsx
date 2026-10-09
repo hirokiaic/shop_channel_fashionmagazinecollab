@@ -115,6 +115,7 @@ export const styleSectionData: StyleSectionData = {
             name: "商品名が入ります",
             price: "¥40,000",
             buyHref: "#",
+            notes: "販売開始は11/8（日）23時を予定しております。"
         },
         {
             id: "spcl06_buy_onair_item08",
@@ -123,6 +124,7 @@ export const styleSectionData: StyleSectionData = {
             name: "商品名が入ります",
             price: "¥40,000",
             buyHref: "#",
+            notes: "販売開始は11/8（日）23時を予定しております。"
         },
     ],
     productButton: {

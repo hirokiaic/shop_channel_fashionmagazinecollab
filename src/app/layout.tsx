@@ -10,24 +10,25 @@ import { cn } from "@/lib/utils";
 import { GTMChecker } from "@/components/GTMChecker";
 
 const noto_serif_jp = Noto_Serif_JP({
-    weight: ["400", "500", "600", "700", "800"],
+    weight: ["400", "600", "700"],
     variable: "--font-noto-serif-jp",
     subsets: ["latin"],
 });
 
 const noto_sans_jp = Noto_Sans_JP({
-    weight: ["400", "500", "600", "700"],
+    weight: ["400", "500"],
     variable: "--font-noto-sans-jp",
     subsets: ["latin"],
 });
 
 const amiri = Amiri({
-    weight: ["400", "700"],
+    weight: ["400"],
     variable: "--font-amiri",
     subsets: ["latin"],
 });
 
 const jost = Jost({
+    weight: ["400", "500", "600"],
     variable: "--font-jost",
     subsets: ["latin"],
 });
@@ -39,7 +40,7 @@ const gilda_display = Gilda_Display({
 });
 
 const shippori_mincho = Shippori_Mincho({
-    weight: ["400", "500", "600", "700", "800"],
+    weight: ["500", "700"],
     variable: "--font-shippori-mincho",
     subsets: ["latin"],
 });
