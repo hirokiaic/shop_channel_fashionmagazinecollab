@@ -34,20 +34,18 @@ export default function PageTop() {
     const day = useUrlParam("day");
     const { expiredMap } = useExpired();
     const isExpired = (key: string) => expiredMap[key] ?? false;
-    const { isProd } = useDomain();
+    const { isProd, isTest } = useDomain();
 
-    const previewDay10_20 =
-        isClient &&
-        !isProd &&
-        !isExpired("phase1") &&
-        day === "10/20";
+    const phase1 = isTest ? true : isExpired("phase1");
+    console.log(phase1);
+    // const previewDay10_20 = isClient && !isProd && !isExpired("phase1") && day === "10/20";
 
     return (
         <main id="main">
             <div className="relative z-[1] overflow-hidden">
                 {!isClient ? (
                     <HeroPlaceholder />
-                ) : previewDay10_20 ? (
+                ) : !phase1 ? (
                     <TeaserContent />
                 ) : (
                     <MVContent />
@@ -58,9 +56,9 @@ export default function PageTop() {
                 <BgSticky className="hidden lg:block" />
 
                 <div className="w-full max-w-[440px] mx-auto bg-white relative overflow-hidden shadow-[0_20px_40px_rgba(51,51,51,0.40)] outline outline-1 outline-black -outline-offset-1">
-                    <IntroSection className={cn(previewDay10_20 ? "pb-20" : "")} />
+                    <IntroSection className={cn(!phase1 ? "pb-20" : "")} />
 
-                    {isClient && !previewDay10_20 && (
+                    {isClient && phase1 && (
                         <>
                             <AnchorSection />
 

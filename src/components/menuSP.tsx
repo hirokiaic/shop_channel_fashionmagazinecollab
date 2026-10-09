@@ -19,10 +19,10 @@ const MenuSP = ({ className, ...props }: MenuSPProps) => {
     const day = useUrlParam('day');
     const { expiredMap } = useExpired();
     const isExpired = (key: string) => expiredMap[key] ?? false;
-    const { isProd } = useDomain();
+    const { isProd, isTest } = useDomain();
 
-    // const phase1 = isExpired("phase1")
-    const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
+    const phase1 = isTest ? true : isExpired("phase1");
+    // const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
 
     useEffect(() => {
         function handleScroll() {
@@ -45,7 +45,7 @@ const MenuSP = ({ className, ...props }: MenuSPProps) => {
         };
     }, [isOpen]);
 
-    if (previewDay10_20) return null;
+    if (phase1) return null;
 
     return (
         <div className={cn("", className)}

@@ -37,16 +37,16 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
     const day = useUrlParam('day');
     const { expiredMap } = useExpired();
     const isExpired = (key: string) => expiredMap[key] ?? false;
-    const { isProd } = useDomain();
+    const { isProd, isTest } = useDomain();
     const isClient = useIsClient();
 
-    // const phase1 = isExpired("phase1")
-    const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
+    const phase1 = isTest ? true : isExpired("phase1");
+    // const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
 
     const [activeSection, setActiveSection] = useState("");
 
     useEffect(() => {
-        if (!isClient || previewDay10_20) return;
+        if (!isClient || phase1) return;
 
         const sections = COLLABORATION_SECTION_IDS
             .map((id) => document.getElementById(id))
@@ -85,12 +85,12 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
         sections.forEach((section) => observer.observe(section));
 
         return () => observer.disconnect();
-    }, [isClient, previewDay10_20]);
+    }, [isClient, phase1]);
 
     return (
         <div className={cn("absolute top-0 w-full h-full", className)} {...props} >
 
-            {!previewDay10_20 && (
+            {phase1 && (
                 <div className="sticky top-0 h-screen overflow-hidden">
                     {/* right */}
                     <div className="absolute top-0 right-0 bottom-0 my-auto h-fit hidden w-[calc((100vw-440px)/2)] lg:block">
