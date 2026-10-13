@@ -4,7 +4,6 @@ import Image from "next/image";
 
 type CountdownSectionProps = {
     targetDate: Date;
-    setIsExpired: React.Dispatch<React.SetStateAction<boolean>>;
     className?: string;
 };
 
