@@ -1,18 +1,38 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageTop from "./page-top";
 import CountdownSection from "./PageSections/countdownSection";
 
 export default function PageTopCountdown() {
-    const targetDate = new Date('2026-08-30T00:00:00+09:00');
-    const [isExpired, setIsExpired] = useState(targetDate.getTime() < new Date().getTime());
+    const targetDate = new Date('2026-10-20T00:00:00+09:00');
+    // const [isExpired, setIsExpired] = useState(targetDate.getTime() < new Date().getTime());
+
+    const [isExpired, setIsExpired] = useState<boolean | null>(null);
+
+    useEffect(() => {
+        // avoid mismatch between client and server(run in client)
+        const check = () => {
+            setIsExpired(new Date().getTime() >= targetDate.getTime());
+        };
+
+        // update as soon as the component mounts
+        check();
+
+        // update every second
+        const interval = setInterval(check, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    // avoid hydration error (Until I know if it has expired, it doesn't render anything.)
+    if (isExpired === null) return null;
 
     return (
         <div>
             {isExpired ? (
                 <PageTop />
             ) : (
-                <CountdownSection targetDate={targetDate} setIsExpired={setIsExpired} />
+                <CountdownSection targetDate={targetDate} />
             )}
         </div>
     );
