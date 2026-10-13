@@ -2,12 +2,14 @@
 import { useEffect, useState } from "react";
 import PageTop from "./page-top";
 import CountdownSection from "./PageSections/countdownSection";
+import { useDomain } from "@/hooks/use-domain";
 
 export default function PageTopCountdown() {
     const targetDate = new Date('2026-10-20T00:00:00+09:00');
     // const [isExpired, setIsExpired] = useState(targetDate.getTime() < new Date().getTime());
 
     const [isExpired, setIsExpired] = useState<boolean | null>(null);
+    const { isTest } = useDomain();
 
     useEffect(() => {
         // avoid mismatch between client and server(run in client)
@@ -29,7 +31,7 @@ export default function PageTopCountdown() {
 
     return (
         <div>
-            {isExpired ? (
+            {isExpired || isTest ? (
                 <PageTop />
             ) : (
                 <CountdownSection targetDate={targetDate} />
