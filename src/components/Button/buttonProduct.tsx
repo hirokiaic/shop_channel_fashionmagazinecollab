@@ -36,6 +36,7 @@ const ButtonProduct = ({
 }: ButtonProductProps) => {
     return (
         <a
+            data-shopch-link
             id={id}
             href={href}
             className={cn(buttonProductClassName, className)}
