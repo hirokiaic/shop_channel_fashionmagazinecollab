@@ -23,7 +23,7 @@ const SLIDES = [
         alt: "コラボレーションルック",
     },
     {
-        src: "/images/slides/slide-4.webp",
+        src: "/images/slides/slide-6.webp",
         alt: "コラボレーションルック",
     }
 ] as const;

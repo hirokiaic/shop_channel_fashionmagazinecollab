@@ -36,7 +36,8 @@ export const item01SectionData: ItemSectionData = {
             </>
         ),
         price: "¥36,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
+        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
     },
     detailProduct: {
         id: "spcl06_buy_item01_bottom",
@@ -48,7 +49,8 @@ export const item01SectionData: ItemSectionData = {
             </>
         ),
         price: "¥36,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
+        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
     },
     comment: {
         heading: (
@@ -111,7 +113,8 @@ export const item02SectionData: ItemSectionData = {
             </>
         ),
         price: "¥129,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
+        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
     },
     detailProduct: {
         id: "spcl06_buy_item02_bottom",
@@ -123,7 +126,8 @@ export const item02SectionData: ItemSectionData = {
             </>
         ),
         price: "¥129,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
+        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
     },
     comment: {
         heading: (
@@ -140,7 +144,7 @@ export const item02SectionData: ItemSectionData = {
         },
         {
             image: "/images/item02/detail-2.webp",
-            text: "ミニマルで実用的な箱ポ ケット。生地の上質感と美しいフォルムを引き立たせます。確かなテーラリング技術で、細部まで丁寧に仕立てられた日本製の上質な一着。",
+            text: "ミニマルで実用的な箱ポケット。生地の上質感と美しいフォルムを引き立たせます。確かなテーラリング技術で、細部まで丁寧に仕立てられた日本製の上質な一着。",
         },
         {
             image: "/images/item02/detail-3.webp",

@@ -12,6 +12,7 @@ const sizeStyles = {
         aspect: "aspect-square",
         gradient: "h-[40px]",
         imageSizes: "170px",
+        imageClassName: "",
         modalImage: "max-w-[380px] aspect-square",
         modalImageSizes: "380px",
     },
@@ -20,6 +21,7 @@ const sizeStyles = {
         aspect: "aspect-square",
         gradient: "h-[40px]",
         imageSizes: "140px",
+        imageClassName: "",
         modalImage: "max-w-[380px] aspect-square",
         modalImageSizes: "380px",
     },
@@ -28,15 +30,18 @@ const sizeStyles = {
         aspect: "aspect-[214/302]",
         gradient: "h-[48px]",
         imageSizes: "214px",
-        modalImage: "max-w-[380px] aspect-[214/302]",
+        imageClassName: "h-[282px] sm:h-[302px]",
+        modalImage: "max-w-[214px] aspect-[214/302]",
         modalImageSizes: "380px",
+        
     },
     card: {
         trigger: "",
-        aspect: "aspect-[160/226]",
+        aspect: "",
         gradient: "h-[40px]",
         imageSizes: "160px",
-        modalImage: "max-w-[380px] aspect-[160/226]",
+        imageClassName: "",
+        modalImage: "max-w-[380px]",
         modalImageSizes: "380px",
     },
 } as const;
@@ -155,7 +160,7 @@ const ModalImage = ({
                         width={1920}
                         height={1920}
                         sizes={styles.imageSizes}
-                        className="object-cover"
+                        className={cn("", styles.imageClassName)}
                     />
                 </span>
 
