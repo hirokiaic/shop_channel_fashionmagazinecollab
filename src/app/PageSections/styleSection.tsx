@@ -26,7 +26,7 @@ export type StyleGridItem = {
     id: string;
     image: string;
     description: string;
-    name: string;
+    name: React.ReactNode;
     price: string;
     buyHref?: string;
     notes?: string;
