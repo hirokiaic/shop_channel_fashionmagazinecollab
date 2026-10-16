@@ -13,10 +13,14 @@ export const styleSectionData: StyleSectionData = {
         {
             id: "spcl06_buy_magazine_item01",
             sectionId: "cotton-cashmere-top",
-            images: featuredImages,
+            images: {
+                main: "/images/style/item-1.webp",
+                sub1: "/images/style/item-1-1.webp",
+                sub2: "/images/style/item-1-2.webp",
+            },
             description:
-                "有名メゾンが認める老舗ファクトリー「エイガールズ」の日本製リブトップス。コットン90%×カシミヤ10%の優雅な肌触り、ラインを拾いすぎない編地設計。",
-            name: "コットンカシミヤ プルオーバー",
+                "有名メゾンにも選ばれる老舗ファクトリー「エイガールズ」の日本製リブトップス。コットン90%×カシミヤ10%の優雅な肌触り、ラインを拾いすぎない編地設計。",
+            name: <>エイガールズ<br/>コットンカシミヤプルオーバー</>,
             price: "¥9,900",
             buyHref: "#",
             note: "先行販売の数量には限りがございます。予定数に達した場合は、11月8日(日)放映日にあらためてご確認ください。",
@@ -24,24 +28,32 @@ export const styleSectionData: StyleSectionData = {
         {
             id: "spcl06_buy_magazine_item02",
             sectionId: "semi-wide-jeans",
-            images: featuredImages,
+            images: {
+                main: "/images/style/item-2.webp",
+                sub1: "/images/style/item-2-1.webp",
+                sub2: "/images/style/item-2-2.webp",
+            },
             description:
                 "「DOCTOR DENIM HONZAWA」本澤氏による渾身の一本。カイハラ社製のコットンデニムに、腰周りすっきり、深めの股上。立体パターンが叶える快適な穿き心地。細部までこだわり抜いた、本格デニム。",
-            name: "セミワイド ストレートジーンズ",
+            name: <>シュガーデプト<br/>セミワイドストレートジーンズ</>,
             price: "¥27,800",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_magazine_item03",
             sectionId: "cardigan",
-            images: featuredImages,
+            images: {
+                main: "/images/style/item-3.webp",
+                sub1: "/images/style/item-3-1.webp",
+                sub2: "/images/style/item-3-2.webp",
+            },
             description:
                 "極細メリノウール100％が叶える、上質な肌触りと美しい光沢。滑らかな編み上がりで、軽やかな着心地。きちんと感のあるシャツカラー仕立て。貝ボタンと配色使いで表情豊かに。",
             name: (
                 <>
-                    スーパーエキストラファイン
-                    <br />
-                    メリノウール カーディガン
+                    アズイズ ビーマイセルフバイ ネイチャーズ<br />
+                    スーパーエクストラファインメリノウール<br />
+                    襟付きカーディガン
                 </>
             ),
             price: "¥25,900",
@@ -50,10 +62,14 @@ export const styleSectionData: StyleSectionData = {
         {
             id: "spcl06_buy_magazine_item04",
             sectionId: "check-stole",
-            images: featuredImages,
+            images: {
+                main: "/images/style/item-4.webp",
+                sub1: "/images/style/item-4-1.webp",
+                sub2: "/images/style/item-4-2.webp",
+            },
             description:
-                "スコットランドの名門ロキャロン社のエクストラファインメリノウール100%。世界で愛される逸品。ハリとコシのある軽やかさ。職人技が生み出す美しい光沢感。羽織るだけでラグジュアリーに。",
-            name: "タータンチェック ストール（約200×70cm）",
+                "スコットランドの名門ロキャロン社製のエクストラファインメリノウール100%。世界で愛される逸品。ハリとコシのある軽やかさ。職人技が生み出す美しい光沢感。羽織るだけでラグジュアリーに。",
+            name: <>アズイズ ビーマイセルフバイ ネイチャーズ<br/>タータンチェックストール</>,
             price: "¥26,800",
             buyHref: "#",
             note: "先行販売の数量には限りがございます。予定数に達した場合は、11月8日(日)放映日にあらためてご確認ください。",
@@ -63,66 +79,66 @@ export const styleSectionData: StyleSectionData = {
         {
             id: "spcl06_buy_onair_item01",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "胸元で存在感のある輝きを放ち、大人の着こなしのワンポイントに",
+            name: <>ラフィナリスタ<br/>ニュアンスシェイプネックレス</>,
+            price: "￥9,600",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_onair_item02",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "サージカルステンレス使用手首に美しくなじむオーバルフォルムと上品な輝き",
+            name: "ラフィナリスタ ワンタッチバングル",
+            price: "￥9,800 ",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_onair_item03",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "10石のダイヤを贅沢に配した、エコ・ドライブ搭載モデル",
+            name: <>シチズン<br/>ステンレスベルトソーラーウォッチ</>,
+            price: "￥70,400",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_onair_item04",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "シュリンク加工が奏でる上質な表情のラムレザージャケット",
+            name: <>元町ゼラール<br/>ソフトラムシュリンク ジャケット</>,
+            price: "￥49,000",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_onair_item05",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "上質な光沢感としなやかなドレープが女性らしいブラウス",
+            name: <>ヴィアッジャーレ<br/>デニム調シャンブレーブラウス</>,
+            price: "￥12,800",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_onair_item06",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "サイドラインが装いにアクセントを添え、きれい見えと快適さを両立 ",
+            name: <>上質ごこち<br/>サイドラインパンツ</>,
+            price: "￥15,400",
             buyHref: "#",
         },
         {
             id: "spcl06_buy_onair_item07",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "イタリアンカーフにアールデコモティーフが輝く２ウェイ仕様",
+            name: <>ADMJ<br/>ミニショルダーバッグ</>,
+            price: "￥104,500",
             buyHref: "#",
             notes: "販売開始は11/8（日）23時を予定しております。"
         },
         {
             id: "spcl06_buy_onair_item08",
             image: stylingImage,
-            description: "商品説明が入ります商品説明が入ります商品説明が入ります",
-            name: "商品名が入ります",
-            price: "¥40,000",
+            description: "スエード調のイタリアンファブリックを使用したクロスボディバッグ",
+            name: <>ADMJ<br/>クロスボディバッグ</>,
+            price: "￥93,500",
             buyHref: "#",
             notes: "販売開始は11/8（日）23時を予定しております。"
         },
