@@ -19,6 +19,7 @@ export type StyleFeaturedItem = {
     name: ReactNode;
     price: string;
     buyHref: string;
+    buyHrefSP: string;
     note?: string;
 };
 
@@ -26,15 +27,17 @@ export type StyleGridItem = {
     id: string;
     image: string;
     description: string;
-    name: string;
+    name: React.ReactNode;
     price: string;
     buyHref?: string;
+    buyHrefSP?: string;
     notes?: string;
 };
 
 export type StyleProductButton = {
     id: string;
     href: string;
+    hrefSP: string;
     leftImage: string;
     rightImage: string;
     leftImageAlt?: string;
@@ -111,11 +114,24 @@ function FeaturedItemRow({
                             </span>
                         </p>
 
+                        {/* SP */}
                         <Button
+                            data-shopch-link
+                            id={item.id}
+                            href={item.buyHrefSP}
+                            variant="small"
+                            className="shrink-0 md:hidden"
+                        >
+                            BUY
+                        </Button>
+
+                        {/* PC */}
+                        <Button
+                            data-shopch-link
                             id={item.id}
                             href={item.buyHref}
                             variant="small"
-                            className="shrink-0"
+                            className="shrink-0 hidden md:flex"
                         >
                             BUY
                         </Button>
@@ -149,13 +165,27 @@ function StylingCard({ item }: { item: StyleGridItem }) {
 
             <div className="flex w-full flex-col items-start leading-[1.8]">
                 {item.buyHref ? (
-                    <a
-                        id={item.id}
-                        href={item.buyHref}
-                        className="font-noto-sans-jp text-[12px] font-medium tracking-[1.2px] text-black underline"
-                    >
-                        {item.name}
-                    </a>
+                    <>
+                        {/* SP */}
+                        <a
+                            data-shopch-link
+                            id={item.id}
+                            href={item.buyHrefSP}
+                            className="font-noto-sans-jp text-[12px] font-medium tracking-[1.2px] text-black underline md:hidden"
+                        >
+                            {item.name}
+                        </a>
+
+                        {/* PC */}
+                        <a
+                            data-shopch-link
+                            id={item.id}
+                            href={item.buyHref}
+                            className="font-noto-sans-jp text-[12px] font-medium tracking-[1.2px] text-black underline hidden md:block"
+                        >
+                            {item.name}
+                        </a>
+                    </>
                 ) : (
                     <p className="m-0 font-noto-sans-jp text-[12px] font-medium tracking-[1.2px] text-black underline">
                         {item.name}
@@ -262,10 +292,14 @@ export default function StyleSection({
                 <div className="flex flex-col items-center gap-2 bg-background-warm py-[40px] rounded-[4px]">
                     <div className="w-full flex flex-col items-center gap-6 px-3.5">
                         <p className="text-center font-noto-serif-jp text-[23px] md:text-[26px] font-semibold leading-[1.6] tracking-[3.9px] text-black">
-                            上質な一着との出会いは、<br/>ここから。
+                            上質な一着との出会いは、<br />ここから。
                         </p>
 
-                        <ButtonProduct {...productButton} />
+                        {/* SP */}
+                        <ButtonProduct {...productButton} href={productButton.hrefSP} className="md:hidden" />
+
+                        {/* PC */}
+                        <ButtonProduct {...productButton} href={productButton.href} className="hidden md:flex" />
                     </div>
                 </div>
             </div>

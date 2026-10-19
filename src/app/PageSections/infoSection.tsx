@@ -19,11 +19,11 @@ type InfoSectionProps = {
 };
 
 const defaultGuest: InfoSectionGuest = {
-    name: "杉浦編集長",
+    name: "éclat編集長　杉浦 歩氏",
     description:
-        "編集長の説明が入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります",
+        "集英社入社後、数々の女性ファッション誌でファッション・ジュエリー担当、編集長を歴任し、現在は『éclat』ブランド統括/編集長として、40代からの大人の女性に向けた美意識を発信し続けています。",
     image: "/images/info/guest-1.webp",
-    imageAlt: "杉浦編集長",
+    imageAlt: "éclat編集長　杉浦 歩氏",
 };
 
 export default function InfoSection({

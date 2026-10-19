@@ -28,6 +28,7 @@ export type ItemSectionProduct = {
     name: ReactNode;
     price: string;
     buyHref: string;
+    buyHrefSP: string;
 };
 
 export type ItemSectionComment = {
@@ -74,7 +75,13 @@ function ProductBlock({
                 </p>
             </div>
 
-            <Button id={product.id} href={product.buyHref} className="w-full max-w-none">
+            {/* SP */}
+            <Button data-shopch-link id={product.id} href={product.buyHrefSP} className="w-full max-w-none md:hidden">
+                BUY
+            </Button>
+
+            {/* PC */}
+            <Button data-shopch-link id={product.id} href={product.buyHref} className="w-full max-w-none hidden md:flex">
                 BUY
             </Button>
         </div>

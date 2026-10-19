@@ -23,7 +23,7 @@ const SLIDES = [
         alt: "コラボレーションルック",
     },
     {
-        src: "/images/slides/slide-4.webp",
+        src: "/images/slides/slide-6.webp",
         alt: "コラボレーションルック",
     }
 ] as const;
@@ -37,10 +37,10 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
     const day = useUrlParam('day');
     const { expiredMap } = useExpired();
     const isExpired = (key: string) => expiredMap[key] ?? false;
-    const { isProd, isTest } = useDomain();
+    const { isProd, isTest, isLocalhost } = useDomain();
     const isClient = useIsClient();
 
-    const phase1 = isTest ? true : isExpired("phase1");
+    const phase1 = (isTest || isLocalhost) ? true : isExpired("phase1");
     // const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
 
     const [activeSection, setActiveSection] = useState("");

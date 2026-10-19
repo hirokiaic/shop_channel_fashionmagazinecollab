@@ -9,7 +9,7 @@ export default function PageTopCountdown() {
     // const [isExpired, setIsExpired] = useState(targetDate.getTime() < new Date().getTime());
 
     const [isExpired, setIsExpired] = useState<boolean | null>(null);
-    const { isTest } = useDomain();
+    const { isTest, isLocalhost } = useDomain();
 
     useEffect(() => {
         // avoid mismatch between client and server(run in client)
@@ -31,7 +31,7 @@ export default function PageTopCountdown() {
 
     return (
         <div>
-            {isExpired || isTest ? (
+            {isExpired || isTest || isLocalhost ? (
                 <PageTop />
             ) : (
                 <CountdownSection targetDate={targetDate} />

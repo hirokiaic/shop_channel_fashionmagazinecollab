@@ -11,7 +11,7 @@ export const item01SectionData: ItemSectionData = {
     },
     heading: (
         <>
-            極上の肌当たり
+            極上の肌ざわり
             <br />
             無染色カシミヤ100％という贅沢
         </>
@@ -19,46 +19,46 @@ export const item01SectionData: ItemSectionData = {
     mainImages: [
         {
             src: "/images/item01/img-1.webp",
-            alt: "無染色カシミヤ Vネックニットプルオーバー着用イメージ",
+            alt: "ルーエンローズ日本製無染色カシミヤニットプルオーバー着用イメージ",
         },
         {
             src: "/images/item01/img-2.webp",
-            alt: "無染色カシミヤ Vネックニットプルオーバー商品イメージ",
+            alt: "ルーエンローズ日本製無染色カシミヤニットプルオーバー商品イメージ",
         },
     ],
     product: {
         id: "spcl06_buy_item01_top",
         name: (
             <>
-                éclatコラボレーション
-                <br />
-                無染色カシミヤ Vネックニットプルオーバー
+                éclatコラボレーション<br />
+                ルーエンローズ<br />
+                日本製無染色カシミヤニットプルオーバー
             </>
         ),
         price: "¥36,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
     },
     detailProduct: {
         id: "spcl06_buy_item01_bottom",
         name: (
             <>
-                éclatコラボレーション
-                <br />
-                無染色カシミヤ Vネックニットプルオーバー
+                éclatコラボレーション<br />
+                ルーエンローズ<br />
+                日本製無染色カシミヤニットプルオーバー
             </>
         ),
         price: "¥36,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
     },
     comment: {
         heading: (
             <>
-                見出しが入ります見出しが入ります
-                <br />
-                見出しが入ります
+                この冬、大人が頼れる理想のカシミヤニット
             </>
         ),
-        body: "編集長コメントが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります",
+        body: "一枚でさらりと着ても、シャツを重ねても決まる 首元、ゆったりしているのにすっきり見えるシル エットがこだわり。無染色カシミヤ100％ならで はの贅沢な風合いと、冬に映える上品なカラー も魅力。着るたびにその良さを実感していただ ける一枚です。",
     },
     details: [
         {
@@ -67,11 +67,11 @@ export const item01SectionData: ItemSectionData = {
         },
         {
             image: "/images/item01/detail-2.webp",
-            text: "袖口はフィット感のあるリブ編み。たくし上げても落ちにくく、こなれ感が素敵。前身脇のパール編みＶ字ラインが体をすっきり見せます。",
+            text: "袖口はフィット感のあるリブ編み。たくし上げても落ちにくく、こなれ感 が素敵。前身脇のパール編みＶ字ラインが体をすっきり見せます。",
         },
         {
             image: "/images/item01/detail-3.webp",
-            text: "1頭から約200gしか取れない希少な無染色カシミヤ100％を、たっぷり贅沢に使ったミドルゲージ。職人がゆっくり丁寧に編み立てています。",
+            text: "1頭から約200gしか取れない希少な無染色カシミヤ100％を、贅沢に使ったミドルゲージ。職人がゆっくり丁寧に編み立てています。",
         },
     ],
     note: "先行販売の数量には限りがございます。予定数に達した場合は、11月8日(日)放映日にあらためてご確認ください。",
@@ -90,61 +90,61 @@ export const item02SectionData: ItemSectionData = {
         <>
             羽織るだけで品良く
             <br />
-            イタリア生地ウール×カシミヤ<br className="sm:hidden" />コート
+            イタリア製生地のウールカシミヤ<br />コート
         </>
     ),
     mainImages: [
         {
             src: "/images/item02/img-1.webp",
-            alt: "ウールカシミヤダブルブレストロングコート着用イメージ",
+            alt: "メリオンウールカシミヤダブルブレストロングコート着用イメージ",
         },
         {
             src: "/images/item02/img-2.webp",
-            alt: "ウールカシミヤダブルブレストロングコート商品イメージ",
+            alt: "メリオンウールカシミヤダブルブレストロングコート商品イメージ",
         },
     ],
     product: {
         id: "spcl06_buy_item02_top",
         name: (
             <>
-                éclatコラボレーション
-                <br />
+                éclatコラボレーション<br />
+                メリオン<br />
                 ウールカシミヤダブルブレストロングコート
             </>
         ),
         price: "¥129,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
     },
     detailProduct: {
         id: "spcl06_buy_item02_bottom",
         name: (
             <>
-                éclatコラボレーション
-                <br />
+                éclatコラボレーション<br />
+                メリオン<br />
                 ウールカシミヤダブルブレストロングコート
             </>
         ),
         price: "¥129,000",
-        buyHref: "#",
+        buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
     },
     comment: {
         heading: (
             <>
-                見出しが入ります見出しが入ります
-                <br />
-                見出しが入ります
+                大人の日常を美しく彩るロングコート
             </>
         ),
-        body: "日本の職人による上質なテーラリング。肩から袖へのラインの美しさ、絶妙なゆとりと縦長感が、身体を優雅にすっきりと見せ、洗練された大人の印象を引き出します。膝下まで届くロング丈が大人らしい佇まいを演出。余計な装飾を省き、素材の上質さとシルエットの美しさが際立つミニマルで洗練されたデザイン。",
+        body: "まず心を掴まれたのは、生地の美しい表情と軽やかな着心地。ロングコートならではの優雅さがありながら、重たく見えない絶妙なバランスが魅力です。肩まわりのシルエットやラペルの幅、ボタンの色に至るまで細部を丁寧に調整しました。時代に左右されず長く愛せるコートに仕上がっ ています。",
     },
     details: [
         {
             image: "/images/item02/detail-1.webp",
-            text: "程良いドロップショルダーで今っぽさを。上品でありながらもかしこまり過ぎないダブルブレスト。顔まわりをすっきり見せる襟のボリューム感がこだわり。",
+            text: "程良いドロップショルダー で今っぽさを。上品でありながらもかしこまり過ぎないダブルブレスト。 同系色のボタンでさりげない高級感を。",
         },
         {
             image: "/images/item02/detail-2.webp",
-            text: "ミニマルで実用的な箱ポケット。生地の上質感と美しいフォルムを引き立たせます。同系色のボタンでさりげない高級感を。",
+            text: "ミニマルで実用的な箱ポケット。生地の上質感と美しいフォルムを引き立たせます。確かなテーラリング技術で、細部まで丁寧に仕立てられた日本製の上質な一着。",
         },
         {
             image: "/images/item02/detail-3.webp",
