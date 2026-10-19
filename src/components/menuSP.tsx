@@ -21,7 +21,7 @@ const MenuSP = ({ className, ...props }: MenuSPProps) => {
     const isExpired = (key: string) => expiredMap[key] ?? false;
     const { isProd, isTest, isLocalhost } = useDomain();
 
-    const phase1 = (isTest || isLocalhost) ? true : isExpired("phase1");
+    const phase1 = (isTest || isLocalhost) ? false : isExpired("phase1");
     // const previewDay10_20 = isProd ? false : !isExpired("phase1") && day == "10/20";
 
     useEffect(() => {

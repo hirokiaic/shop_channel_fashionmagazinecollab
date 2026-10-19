@@ -37,7 +37,7 @@ export const item01SectionData: ItemSectionData = {
         ),
         price: "¥36,000",
         buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
-        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
     },
     detailProduct: {
         id: "spcl06_buy_item01_bottom",
@@ -50,7 +50,7 @@ export const item01SectionData: ItemSectionData = {
         ),
         price: "¥36,000",
         buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
-        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=824271&il=spcl06_01_01&ic=item",
     },
     comment: {
         heading: (
@@ -114,7 +114,7 @@ export const item02SectionData: ItemSectionData = {
         ),
         price: "¥129,000",
         buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
-        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
     },
     detailProduct: {
         id: "spcl06_buy_item02_bottom",
@@ -127,7 +127,7 @@ export const item02SectionData: ItemSectionData = {
         ),
         price: "¥129,000",
         buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
-        buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
+        buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=825351&il=spcl06_01_02&ic=item",
     },
     comment: {
         heading: (
