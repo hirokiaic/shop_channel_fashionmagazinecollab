@@ -19,7 +19,7 @@ export type StyleFeaturedItem = {
     name: ReactNode;
     price: string;
     buyHref: string;
-    buyHrefSp: string;
+    buyHrefSP: string;
     note?: string;
 };
 
@@ -30,14 +30,14 @@ export type StyleGridItem = {
     name: React.ReactNode;
     price: string;
     buyHref?: string;
-    buyHrefSp?: string;
+    buyHrefSP?: string;
     notes?: string;
 };
 
 export type StyleProductButton = {
     id: string;
     href: string;
-    hrefSp: string;
+    hrefSP: string;
     leftImage: string;
     rightImage: string;
     leftImageAlt?: string;
@@ -118,7 +118,7 @@ function FeaturedItemRow({
                         <Button
                             data-shopch-link
                             id={item.id}
-                            href={item.buyHrefSp}
+                            href={item.buyHrefSP}
                             variant="small"
                             className="shrink-0 md:hidden"
                         >
@@ -170,7 +170,7 @@ function StylingCard({ item }: { item: StyleGridItem }) {
                         <a
                             data-shopch-link
                             id={item.id}
-                            href={item.buyHrefSp}
+                            href={item.buyHrefSP}
                             className="font-noto-sans-jp text-[12px] font-medium tracking-[1.2px] text-black underline md:hidden"
                         >
                             {item.name}
@@ -296,7 +296,7 @@ export default function StyleSection({
                         </p>
 
                         {/* SP */}
-                        <ButtonProduct {...productButton} href={productButton.hrefSp} className="md:hidden" />
+                        <ButtonProduct {...productButton} href={productButton.hrefSP} className="md:hidden" />
 
                         {/* PC */}
                         <ButtonProduct {...productButton} href={productButton.href} className="hidden md:flex" />

@@ -23,7 +23,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>エイガールズ<br/>コットンカシミヤプルオーバー</>,
             price: "¥9,900",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825350&il=spcl06_02_01&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=825350&il=spcl06_02_01&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=825350&il=spcl06_02_01&ic=item",
             note: "先行販売の数量には限りがございます。予定数に達した場合は、11月8日(日)放映日にあらためてご確認ください。",
         },
         {
@@ -39,7 +39,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>シュガーデプト<br/>セミワイドストレートジーンズ</>,
             price: "¥27,800",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=827746&il=spcl06_02_02&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=827746&il=spcl06_02_02&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=827746&il=spcl06_02_02&ic=item",
         },
         {
             id: "spcl06_buy_magazine_item03",
@@ -60,7 +60,7 @@ export const styleSectionData: StyleSectionData = {
             ),
             price: "¥25,900",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=827757&il=spcl06_02_03&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=827757&il=spcl06_02_03&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=827757&il=spcl06_02_03&ic=item",
         },
         {
             id: "spcl06_buy_magazine_item04",
@@ -75,7 +75,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>アズイズ ビーマイセルフバイ ネイチャーズ<br/>タータンチェックストール</>,
             price: "¥26,800",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=827758&il=spcl06_02_04&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=827758&il=spcl06_02_04&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=827758&il=spcl06_02_04&ic=item",
             note: "先行販売の数量には限りがございます。予定数に達した場合は、11月8日(日)放映日にあらためてご確認ください。",
         },
     ],
@@ -87,7 +87,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>ラフィナリスタ<br/>ニュアンスシェイプネックレス</>,
             price: "￥9,600",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=830093&il=spcl06_03_01&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=830093&il=spcl06_03_01&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=830093&il=spcl06_03_01&ic=item",
         },
         {
             id: "spcl06_buy_onair_item03",
@@ -96,7 +96,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>シチズン<br/>ステンレスベルトソーラーウォッチ</>,
             price: "￥70,400",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=831473&il=spcl06_03_02&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=831473&il=spcl06_03_02&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=831473&il=spcl06_03_02&ic=item",
         },
         {
             id: "spcl06_buy_onair_item02",
@@ -105,7 +105,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>ラフィナリスタ<br/>ワンタッチバングル</>,
             price: "￥9,800 ",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=822336&il=spcl06_03_03&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=822336&il=spcl06_03_03&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=822336&il=spcl06_03_03&ic=item",
         },
         {
             id: "spcl06_buy_onair_item04",
@@ -114,7 +114,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>元町ゼラール<br/>ソフトラムシュリンク ジャケット</>,
             price: "￥49,000",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=825661&il=spcl06_03_04&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=825661&il=spcl06_03_04&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=825661&il=spcl06_03_04&ic=item",
         },
         {
             id: "spcl06_buy_onair_item05",
@@ -123,7 +123,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>ヴィアッジャーレ<br/>デニム調シャンブレーブラウス</>,
             price: "￥12,800",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=821540&il=spcl06_03_05&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=821540&il=spcl06_03_05&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=821540&il=spcl06_03_05&ic=item",
         },
         {
             id: "spcl06_buy_onair_item06",
@@ -132,7 +132,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>上質ごこち<br/>サイドラインパンツ</>,
             price: "￥15,400",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=824546&il=spcl06_03_06&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=824546&il=spcl06_03_06&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=824546&il=spcl06_03_06&ic=item",
         },
         {
             id: "spcl06_buy_onair_item07",
@@ -141,7 +141,7 @@ export const styleSectionData: StyleSectionData = {
             name: <>ADMJ<br/>ミニショルダーバッグ</>,
             price: "￥104,500",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=831699&il=spcl06_03_07&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=831699&il=spcl06_03_07&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=831699&il=spcl06_03_07&ic=item",
             notes: "販売開始は11/8（日）23時を予定しております。"
         },
         {
@@ -151,14 +151,14 @@ export const styleSectionData: StyleSectionData = {
             name: <>ADMJ<br/>クロスボディバッグ</>,
             price: "￥93,500",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=831700&il=spcl06_03_08&ic=item",
-            buyHrefSp: "https://www.shopch.jp/sp/product/proddetail?reqprno=831700&il=spcl06_03_08&ic=item",
+            buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=831700&il=spcl06_03_08&ic=item",
             notes: "販売開始は11/8（日）23時を予定しております。"
         },
     ],
     productButton: {
         id: "spcl06_all_items",
         href: "https://www.shopch.jp/pc/product/prodlist/condid?webcondId=eclat2026?il=spcl06_04_01&ic=item",
-        hrefSp: "https://www.shopch.jp/sp/product/prodlist/condid?webcondId=eclat2026?il=spcl06_04_01&ic=item",
+        hrefSP: "https://www.shopch.jp/sp/product/prodlist/condid?webcondId=eclat2026?il=spcl06_04_01&ic=item",
         leftImage: "/images/product-btn-img1.webp",
         rightImage: "/images/product-btn-img2.webp",
         isExtLink: true,
