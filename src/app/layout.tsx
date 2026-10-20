@@ -66,11 +66,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
             <body className="min-h-full flex flex-col">
                 <GTMChecker />
-                <Header />
-                <MenuSP />
-                <ScrollAnchor />
-                <FidLinkInterceptor />
                 <ExpiredProvider>
+                    <Header />
+                    <MenuSP />
+                    <ScrollAnchor />
+                    <FidLinkInterceptor />
                     {children}
                 </ExpiredProvider>
             </body>
