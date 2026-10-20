@@ -36,7 +36,7 @@ export default function PageTop() {
     const isExpired = (key: string) => expiredMap[key] ?? false;
     const { isProd, isTest, isLocalhost } = useDomain();
 
-    const phase1 = (isTest ) ? true : isExpired("phase1");
+    const phase1 = (isTest || isLocalhost) ? true : isExpired("phase1");
     // const previewDay10_20 = isClient && !isProd && !isExpired("phase1") && day === "10/20";
 
     return (
