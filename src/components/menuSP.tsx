@@ -45,7 +45,7 @@ const MenuSP = ({ className, ...props }: MenuSPProps) => {
         };
     }, [isOpen]);
 
-    if (phase1) return null;
+    if (!phase1) return null;
 
     return (
         <div className={cn("", className)}
