@@ -212,6 +212,7 @@ export default function StyleSection({
     className,
 }: StyleSectionProps) {
     const stylingRows = chunkItems(stylingItems, 2);
+    const { hrefSP, ...buttonProps } = productButton;
 
     return (
         <section
@@ -296,10 +297,10 @@ export default function StyleSection({
                         </p>
 
                         {/* SP */}
-                        <ButtonProduct {...productButton} href={productButton.hrefSP} className="md:hidden" />
+                        <ButtonProduct {...buttonProps} href={hrefSP} className="md:hidden" />
 
                         {/* PC */}
-                        <ButtonProduct {...productButton} href={productButton.href} className="hidden md:flex" />
+                        <ButtonProduct {...buttonProps} href={productButton.href} className="hidden md:flex" />
                     </div>
                 </div>
             </div>
