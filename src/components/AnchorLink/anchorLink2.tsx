@@ -92,7 +92,7 @@ const AnchorLink2 = ({
                     alt={imageAlt}
                     fill
                     sizes="136px"
-                    className="object-cover"
+                    className=""
                 />
             </span>
         </a>
