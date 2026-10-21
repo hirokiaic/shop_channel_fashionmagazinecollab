@@ -138,7 +138,7 @@ const BgSticky = ({ className, ...props }: BgStickyProps) => {
 
                     {/* left */}
                     <div className="absolute top-0 left-0 bottom-0 my-auto h-fit hidden w-[calc((100vw-440px)/2)] lg:block">
-                        <div className="mx-auto flex w-full max-w-[340px] flex-col items-center px-4">
+                        <div className="mx-auto flex w-full max-w-[270px] flex-col items-center">
                             <div className="flex w-full flex-col items-end gap-[16px]">
                                 <AnchorLink2
                                     href="#collaboration-01"
