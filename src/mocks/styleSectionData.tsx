@@ -71,7 +71,7 @@ export const styleSectionData: StyleSectionData = {
                 sub2: "/images/style/item-4-2.webp",
             },
             description:
-                "スコットランドの名門ロキャロン社製のエクストラファインメリノウール100%。世界で愛される逸品。ハリとコシのある軽やかさ。職人技が生み出す美しい光沢感。羽織るだけでラグジュアリーに。",
+                "スコットランドの名門ロキャロン社製のエクストラファインメリノウール100%。世界で愛される逸品。ハリとコシのある軽やかさ。職人技が生み出す美しい光沢感。羽織るだけでラグジュアリーに。(約200×70cm)",
             name: <>アズイズ ビーマイセルフバイ ネイチャーズ<br/>タータンチェックストール</>,
             price: "¥26,800",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=827758&il=spcl06_02_04&ic=item",
@@ -101,7 +101,7 @@ export const styleSectionData: StyleSectionData = {
         {
             id: "spcl06_buy_onair_item02",
              image: "/images/style/styling-2.webp",
-            description: "サージカルステンレス使用 手首に美しくなじむオーバルフォルムと上品な輝き",
+            description: "サージカルステンレス使用。手首に美しくなじむオーバルフォルムと上品な輝き",
             name: <>ラフィナリスタ<br/>ワンタッチバングル</>,
             price: "￥9,800 ",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=822336&il=spcl06_03_03&ic=item",
@@ -142,7 +142,7 @@ export const styleSectionData: StyleSectionData = {
             price: "￥104,500",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=831699&il=spcl06_03_07&ic=item",
             buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=831699&il=spcl06_03_07&ic=item",
-            notes: "販売開始は11/8（日）23時を予定しております。"
+            notes: "販売開始は11/8(日)23時を予定しております。"
         },
         {
             id: "spcl06_buy_onair_item08",
@@ -152,13 +152,13 @@ export const styleSectionData: StyleSectionData = {
             price: "￥93,500",
             buyHref: "https://www.shopch.jp/pc/product/proddetail?reqprno=831700&il=spcl06_03_08&ic=item",
             buyHrefSP: "https://www.shopch.jp/sp/product/proddetail?reqprno=831700&il=spcl06_03_08&ic=item",
-            notes: "販売開始は11/8（日）23時を予定しております。"
+            notes: "販売開始は11/8(日)23時を予定しております。"
         },
     ],
     productButton: {
         id: "spcl06_all_items",
-        href: "https://www.shopch.jp/pc/product/prodlist/condid?webcondId=eclat2026?il=spcl06_04_01&ic=item",
-        hrefSP: "https://www.shopch.jp/sp/product/prodlist/condid?webcondId=eclat2026?il=spcl06_04_01&ic=item",
+        href: "https://www.shopch.jp/pc/product/prodlist/condid?webcondId=eclat2026&il=spcl06_04_01&ic=item",
+        hrefSP: "https://www.shopch.jp/sp/product/prodlist/condid?webcondId=eclat2026&il=spcl06_04_01&ic=item",
         leftImage: "/images/product-btn-img1.webp",
         rightImage: "/images/product-btn-img2.webp",
         isExtLink: true,

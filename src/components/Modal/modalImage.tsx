@@ -31,7 +31,7 @@ const sizeStyles = {
         gradient: "h-[48px]",
         imageSizes: "214px",
         imageClassName: "h-[282px] sm:h-[302px]",
-        modalImage: "max-w-[214px] aspect-[214/302]",
+        modalImage: "aspect-[214/302]",
         modalImageSizes: "380px",
         
     },

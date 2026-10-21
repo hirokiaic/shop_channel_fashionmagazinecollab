@@ -30,6 +30,10 @@ const SLIDES = [
         src: "/images/slides/slide-5.webp",
         alt: "コラボレーションルック 5",
     },
+    {
+        src: "/images/slides/slide-6.webp",
+        alt: "コラボレーションルック 6",
+    },
 ] as const;
 
 const LOOP_SLIDES = [...SLIDES, ...SLIDES];
