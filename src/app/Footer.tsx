@@ -11,7 +11,11 @@ const Footer = ({ className, ...props }: FooterProps) => {
 
 
     return (
-        <div className={cn("w-full", className)}
+        <div
+            className={cn(
+                "w-full",
+                className,
+            )}
             {...props}
         >
              <Link href="#main" className="p-4 flex items-baseline justify-center bg-black text-white font-gilda-display gap-4
@@ -32,7 +36,7 @@ const Footer = ({ className, ...props }: FooterProps) => {
 
                 <Image src={addBasePathToPath("/images/footer-dots.webp")} alt="" width={1440} height={1440} className="w-full max-w-[50px] absolute top-4 right-0 transform -scale-y-[1]" />
             </div>
-            <p className="p-8 text-center text-black text-xs font-shippori-mincho font-medium">© 2026 Jupiter Shop Channel Co.,Ltd. All rights reserved.</p>
+            <p className="p-8 text-center text-black text-xs font-shippori-mincho-medium">© 2026 Jupiter Shop Channel Co.,Ltd. All rights reserved.</p>
         </div>
     );
 };

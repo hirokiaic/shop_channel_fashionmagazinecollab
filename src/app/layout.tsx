@@ -1,49 +1,12 @@
 import type { Metadata } from "next";
-import { Amiri, Gilda_Display, Jost, Noto_Sans_JP, Noto_Serif_JP, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import Header from "./Header";
 import MenuSP from "@/components/menuSP";
 import ScrollAnchor from "@/components/scrollAnchor";
 import FidLinkInterceptor from "@/components/fidLinkInterceptor";
 import { ExpiredProvider } from "./Context/expiredContext";
-import { cn } from "@/lib/utils";
 import { GTMChecker } from "@/components/GTMChecker";
-
-const noto_serif_jp = Noto_Serif_JP({
-    weight: ["400", "600", "700"],
-    variable: "--font-noto-serif-jp",
-    subsets: ["latin"],
-});
-
-const noto_sans_jp = Noto_Sans_JP({
-    weight: ["400", "500"],
-    variable: "--font-noto-sans-jp",
-    subsets: ["latin"],
-});
-
-const amiri = Amiri({
-    weight: ["400"],
-    variable: "--font-amiri",
-    subsets: ["latin"],
-});
-
-const jost = Jost({
-    weight: ["400", "500", "600"],
-    variable: "--font-jost",
-    subsets: ["latin"],
-});
-
-const gilda_display = Gilda_Display({
-    weight: ["400"],
-    variable: "--font-gilda-display",
-    subsets: ["latin"],
-});
-
-const shippori_mincho = Shippori_Mincho({
-    weight: ["500", "700"],
-    variable: "--font-shippori-mincho",
-    subsets: ["latin"],
-});
+import { GOOGLE_FONTS_STYLESHEET_HREF } from "@/lib/fonts/google-fonts";
 
 export const metadata: Metadata = {
     title: "ショップチャンネル×éclat（エクラ） スペシャルコラボ｜ショップチャンネル 30周年特別企画",
@@ -52,18 +15,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
-        <html
-            lang="ja"
-            className={cn(
-                "h-full antialiased font-sans",
-                noto_serif_jp.variable,
-                noto_sans_jp.variable,
-                amiri.variable,
-                jost.variable,
-                gilda_display.variable,
-                shippori_mincho.variable,
-            )}
-        >
+        <html lang="ja" className="h-full antialiased font-sans">
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+                <link rel="stylesheet" href={GOOGLE_FONTS_STYLESHEET_HREF} />
+            </head>
             <body className="min-h-full flex flex-col">
                 <GTMChecker />
                 <ExpiredProvider>
