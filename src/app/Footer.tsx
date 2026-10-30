@@ -2,21 +2,6 @@ import IconSvg from "@/components/iconSvg";
 import { addBasePathToPath, cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import localFont from "next/font/local";
-
-const gilda_display = localFont({
-    src: [{ path: "../fonts/GildaDisplay-Regular.woff2", weight: "400", style: "normal" }],
-    variable: "--font-gilda-display",
-    display: "swap",
-    preload: false,
-});
-
-const shippori_mincho_medium = localFont({
-    src: [{ path: "../fonts/ShipporiMincho-Medium.woff2", weight: "500", style: "normal" }],
-    variable: "--font-shippori-mincho-medium",
-    display: "swap",
-    preload: false,
-});
 
 type FooterProps = {
     className?: string;
@@ -29,8 +14,6 @@ const Footer = ({ className, ...props }: FooterProps) => {
         <div
             className={cn(
                 "w-full",
-                gilda_display.variable,
-                shippori_mincho_medium.variable,
                 className,
             )}
             {...props}
