@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Amiri, Gilda_Display, Jost, Noto_Sans_JP, Noto_Serif_JP, Shippori_Mincho } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./Header";
 import MenuSP from "@/components/menuSP";
@@ -9,40 +9,38 @@ import { ExpiredProvider } from "./Context/expiredContext";
 import { cn } from "@/lib/utils";
 import { GTMChecker } from "@/components/GTMChecker";
 
-const noto_serif_jp = Noto_Serif_JP({
-    weight: ["400", "600", "700"],
+const noto_serif_jp = localFont({
+    src: [
+        { path: "../fonts/NotoSerifJP-SemiBold.woff2", weight: "600", style: "normal" },
+        { path: "../fonts/NotoSerifJP-Bold.woff2", weight: "700", style: "normal" },
+    ],
     variable: "--font-noto-serif-jp",
-    subsets: ["latin"],
+    display: "swap",
 });
 
-const noto_sans_jp = Noto_Sans_JP({
-    weight: ["400", "500"],
+const noto_sans_jp = localFont({
+    src: [
+        { path: "../fonts/NotoSansJP-Regular.woff2", weight: "400", style: "normal" },
+        { path: "../fonts/NotoSansJP-Medium.woff2", weight: "500", style: "normal" },
+    ],
     variable: "--font-noto-sans-jp",
-    subsets: ["latin"],
+    display: "swap",
 });
 
-const amiri = Amiri({
-    weight: ["400"],
-    variable: "--font-amiri",
-    subsets: ["latin"],
-});
-
-const jost = Jost({
-    weight: ["400", "500", "600"],
+const jost = localFont({
+    src: [
+        { path: "../fonts/Jost-Regular.woff2", weight: "400", style: "normal" },
+        { path: "../fonts/Jost-Medium.woff2", weight: "500", style: "normal" },
+        { path: "../fonts/Jost-SemiBold.woff2", weight: "600", style: "normal" },
+    ],
     variable: "--font-jost",
-    subsets: ["latin"],
+    display: "swap",
 });
 
-const gilda_display = Gilda_Display({
-    weight: ["400"],
-    variable: "--font-gilda-display",
-    subsets: ["latin"],
-});
-
-const shippori_mincho = Shippori_Mincho({
-    weight: ["500", "700"],
+const shippori_mincho = localFont({
+    src: [{ path: "../fonts/ShipporiMincho-Bold.woff2", weight: "700", style: "normal" }],
     variable: "--font-shippori-mincho",
-    subsets: ["latin"],
+    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -58,9 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 "h-full antialiased font-sans",
                 noto_serif_jp.variable,
                 noto_sans_jp.variable,
-                amiri.variable,
                 jost.variable,
-                gilda_display.variable,
                 shippori_mincho.variable,
             )}
         >

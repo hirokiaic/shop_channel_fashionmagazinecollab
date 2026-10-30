@@ -2,6 +2,7 @@ import Button from "@/components/Button/button";
 import CardComment from "@/components/Card/cardComment";
 import ModalImage from "@/components/Modal/modalImage";
 import Notes from "@/components/Notes/notes";
+import { amiri } from "@/lib/fonts/amiri";
 import { addBasePathToPath, cn } from "@/lib/utils";
 import Image from "next/image";
 import type { ReactNode } from "react";
@@ -105,6 +106,7 @@ export default function ItemSection({
             id={id}
             className={cn(
                 "flex flex-col items-center gap-16 bg-background-blush inner pt-20 pb-16",
+                amiri.variable,
                 className,
             )}
         >

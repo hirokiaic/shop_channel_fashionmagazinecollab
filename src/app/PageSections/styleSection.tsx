@@ -2,6 +2,7 @@ import Button from "@/components/Button/button";
 import ButtonProduct from "@/components/Button/buttonProduct";
 import ModalImage from "@/components/Modal/modalImage";
 import Notes from "@/components/Notes/notes";
+import { amiri } from "@/lib/fonts/amiri";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
@@ -218,6 +219,7 @@ export default function StyleSection({
         <section
             className={cn(
                 "flex flex-col items-center gap-16 bg-white pt-16",
+                amiri.variable,
                 className,
             )}
         >
