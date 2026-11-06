@@ -8,7 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test:perf": "playwright test tests/performance.spec.ts",
+    "test:perf:desktop": "playwright test tests/performance.spec.ts --project=desktop",
+    "test:perf:mobile": "playwright test tests/performance.spec.ts --project=mobile",
+    "test:perf:ui": "playwright test tests/performance.spec.ts --ui",
+    "test:perf:report": "playwright show-report"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -25,6 +30,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "5.1.1",
+    "@playwright/test": "^1.65.0",
     "@storybook/addon-a11y": "10.3.5",
     "@storybook/addon-docs": "10.3.5",
     "@storybook/nextjs-vite": "10.3.5",
